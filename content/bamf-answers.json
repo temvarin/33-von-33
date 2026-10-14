@@ -1,0 +1,3424 @@
+[
+ {
+  "nr": 1,
+  "id": 17412,
+  "correct": 3,
+  "answers": [
+   "hier Religionsfreiheit gilt.",
+   "die Menschen Steuern zahlen.",
+   "die Menschen das Wahlrecht haben.",
+   "hier Meinungsfreiheit gilt."
+  ]
+ },
+ {
+  "nr": 2,
+  "id": 17361,
+  "correct": 1,
+  "answers": [
+   "Geschichtsunterricht teilnimmt.",
+   "Religionsunterricht teilnimmt.",
+   "Politikunterricht teilnimmt.",
+   "Sprachunterricht teilnimmt."
+  ]
+ },
+ {
+  "nr": 3,
+  "id": 17449,
+  "correct": 0,
+  "answers": [
+   "Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.",
+   "Der Staat muss sich nicht an die Gesetze halten.",
+   "Nur Deutsche müssen die Gesetze befolgen.",
+   "Die Gerichte machen die Gesetze."
+  ]
+ },
+ {
+  "nr": 4,
+  "id": 17432,
+  "correct": 2,
+  "answers": [
+   "Waffenbesitz",
+   "Faustrecht",
+   "Meinungsfreiheit",
+   "Selbstjustiz"
+  ]
+ },
+ {
+  "nr": 5,
+  "id": 17592,
+  "correct": 2,
+  "answers": [
+   "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.",
+   "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+   "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+   "Alle wahlberechtigten Personen müssen wählen."
+  ]
+ },
+ {
+  "nr": 6,
+  "id": 17452,
+  "correct": 3,
+  "answers": [
+   "Volksgesetz",
+   "Bundesgesetz",
+   "Deutsches Gesetz",
+   "Grundgesetz"
+  ]
+ },
+ {
+  "nr": 7,
+  "id": 17430,
+  "correct": 0,
+  "answers": [
+   "Glaubens- und Gewissensfreiheit.",
+   "Unterhaltung.",
+   "Arbeit.",
+   "Wohnung."
+  ]
+ },
+ {
+  "nr": 8,
+  "id": 17431,
+  "correct": 1,
+  "answers": [
+   "Die Würde des Menschen ist unantastbar.",
+   "Alle sollen gleich viel Geld haben.",
+   "Jeder Mensch darf seine Meinung sagen.",
+   "Alle sind vor dem Gesetz gleich."
+  ]
+ },
+ {
+  "nr": 9,
+  "id": 17359,
+  "correct": 2,
+  "answers": [
+   "Schutz der Familie",
+   "Menschenwürde",
+   "Asyl",
+   "Meinungsfreiheit"
+  ]
+ },
+ {
+  "nr": 10,
+  "id": 17381,
+  "correct": 3,
+  "answers": [
+   "die Prügelstrafe",
+   "die Folter",
+   "die Todesstrafe",
+   "die Geldstrafe"
+  ]
+ },
+ {
+  "nr": 11,
+  "id": 17382,
+  "correct": 0,
+  "answers": [
+   "Grundgesetz",
+   "Bundesverfassung",
+   "Gesetzbuch",
+   "Verfassungsvertrag"
+  ]
+ },
+ {
+  "nr": 12,
+  "id": 17450,
+  "correct": 2,
+  "answers": [
+   "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
+   "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.",
+   "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+   "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen."
+  ]
+ },
+ {
+  "nr": 13,
+  "id": 17240,
+  "correct": 3,
+  "answers": [
+   "die regierenden Parteien.",
+   "die Fraktion mit den meisten Abgeordneten.",
+   "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+   "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören."
+  ]
+ },
+ {
+  "nr": 14,
+  "id": 17415,
+  "correct": 1,
+  "answers": [
+   "Passanten auf der Straße beschimpfen darf",
+   "meine Meinung im Internet äußern kann",
+   "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf",
+   "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 15,
+  "id": 17414,
+  "correct": 1,
+  "answers": [
+   "Militärdienst",
+   "Zwangsarbeit",
+   "freie Berufswahl",
+   "Arbeit im Ausland"
+  ]
+ },
+ {
+  "nr": 16,
+  "id": 17451,
+  "correct": 0,
+  "answers": [
+   "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+   "bei Meinungsäußerungen über die Bundesregierung",
+   "bei Diskussionen über Religionen",
+   "bei Kritik am Staat"
+  ]
+ },
+ {
+  "nr": 17,
+  "id": 17358,
+  "correct": 3,
+  "answers": [
+   "Meinungsfreiheit der Einwohner und Einwohnerinnen.",
+   "Petitionen der Bürger und Bürgerinnen.",
+   "Versammlungsfreiheit der Einwohner und Einwohnerinnen.",
+   "Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat."
+  ]
+ },
+ {
+  "nr": 18,
+  "id": 17380,
+  "correct": 0,
+  "answers": [
+   "die Unantastbarkeit der Menschenwürde",
+   "das Recht auf Leben",
+   "Religionsfreiheit",
+   "Meinungsfreiheit"
+  ]
+ },
+ {
+  "nr": 19,
+  "id": 17413,
+  "correct": 0,
+  "answers": [
+   "Man darf sich seinen Wohnort selbst aussuchen.",
+   "Man kann seinen Beruf wechseln.",
+   "Man darf sich für eine andere Religion entscheiden.",
+   "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen."
+  ]
+ },
+ {
+  "nr": 20,
+  "id": 17360,
+  "correct": 3,
+  "answers": [
+   "tolerant.",
+   "rechtsstaatlich orientiert.",
+   "gesetzestreu.",
+   "verfassungswidrig."
+  ]
+ },
+ {
+  "nr": 21,
+  "id": 17213,
+  "correct": 0,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 22,
+  "id": 17274,
+  "correct": 2,
+  "answers": [
+   "Monarchie",
+   "Diktatur",
+   "Republik",
+   "Fürstentum"
+  ]
+ },
+ {
+  "nr": 23,
+  "id": 17563,
+  "correct": 3,
+  "answers": [
+   "in kleinen Familienunternehmen beschäftigt.",
+   "ehrenamtlich für ein Bundesland tätig.",
+   "selbständig mit einer eigenen Firma tätig.",
+   "bei einer Firma oder Behörde beschäftigt."
+  ]
+ },
+ {
+  "nr": 24,
+  "id": 17273,
+  "correct": 2,
+  "answers": [
+   "14",
+   "15",
+   "16",
+   "17"
+  ]
+ },
+ {
+  "nr": 25,
+  "id": 17272,
+  "correct": 0,
+  "answers": [
+   "Elsass-Lothringen",
+   "Nordrhein-Westfalen",
+   "Mecklenburg-Vorpommern",
+   "Sachsen-Anhalt"
+  ]
+ },
+ {
+  "nr": 26,
+  "id": 17220,
+  "correct": 1,
+  "answers": [
+   "eine kommunistische Republik.",
+   "ein demokratischer und sozialer Bundesstaat.",
+   "eine kapitalistische und soziale Monarchie.",
+   "ein sozialer und sozialistischer Bundesstaat."
+  ]
+ },
+ {
+  "nr": 27,
+  "id": 17270,
+  "correct": 1,
+  "answers": [
+   "ein sozialistischer Staat.",
+   "ein Bundesstaat.",
+   "eine Diktatur.",
+   "eine Monarchie."
+  ]
+ },
+ {
+  "nr": 28,
+  "id": 17209,
+  "correct": 2,
+  "answers": [
+   "das Militär",
+   "die Wirtschaft",
+   "das wahlberechtigte Volk",
+   "die Verwaltung"
+  ]
+ },
+ {
+  "nr": 29,
+  "id": 17228,
+  "correct": 1,
+  "answers": [
+   "Löwe",
+   "Adler",
+   "Bär",
+   "Pferd"
+  ]
+ },
+ {
+  "nr": 30,
+  "id": 17230,
+  "correct": 1,
+  "answers": [
+   "regelmäßige Wahlen",
+   "Pressezensur",
+   "Meinungsfreiheit",
+   "verschiedene Parteien"
+  ]
+ },
+ {
+  "nr": 31,
+  "id": 17265,
+  "correct": 1,
+  "answers": [
+   "Einheit.",
+   "Koalition.",
+   "Ministerium.",
+   "Fraktion."
+  ]
+ },
+ {
+  "nr": 32,
+  "id": 17264,
+  "correct": 2,
+  "answers": [
+   "Gesetzgebung",
+   "Regierung",
+   "Presse",
+   "Rechtsprechung"
+  ]
+ },
+ {
+  "nr": 33,
+  "id": 17262,
+  "correct": 0,
+  "answers": [
+   "sind Staat und Religionsgemeinschaften voneinander getrennt.",
+   "bilden die Religionsgemeinschaften den Staat.",
+   "ist der Staat abhängig von den Religionsgemeinschaften.",
+   "bilden Staat und Religionsgemeinschaften eine Einheit."
+  ]
+ },
+ {
+  "nr": 34,
+  "id": 17207,
+  "correct": 2,
+  "answers": [
+   "eine Demokratie",
+   "ein Rechtsstaat",
+   "eine Monarchie",
+   "ein Sozialstaat"
+  ]
+ },
+ {
+  "nr": 35,
+  "id": 17224,
+  "correct": 1,
+  "answers": [
+   "Kirchensteuern",
+   "Sozialabgaben",
+   "Spendengeldern",
+   "Vereinsbeiträgen"
+  ]
+ },
+ {
+  "nr": 36,
+  "id": 17233,
+  "correct": 0,
+  "answers": [
+   "die Krankenversicherung",
+   "die Autoversicherung",
+   "die Gebäudeversicherung",
+   "die Haftpflichtversicherung"
+  ]
+ },
+ {
+  "nr": 37,
+  "id": 17271,
+  "correct": 3,
+  "answers": [
+   "Erster Minister/ Erste Ministerin",
+   "Premierminister/ Premierministerin",
+   "Senator/ Senatorin",
+   "Ministerpräsident/ Ministerpräsidentin"
+  ]
+ },
+ {
+  "nr": 38,
+  "id": 17227,
+  "correct": 1,
+  "answers": [
+   "Staatenverbund.",
+   "Bundesstaat.",
+   "Staatenbund.",
+   "Zentralstaat."
+  ]
+ },
+ {
+  "nr": 39,
+  "id": 17232,
+  "correct": 3,
+  "answers": [
+   "einen eigenen Außenminister / eine eigene Außenministerin",
+   "eine eigene Währung",
+   "eine eigene Armee",
+   "eine eigene Regierung"
+  ]
+ },
+ {
+  "nr": 40,
+  "id": 17239,
+  "correct": 1,
+  "answers": [
+   "Völker, hört die Signale ...",
+   "Einigkeit und Recht und Freiheit ...",
+   "Freude schöner Götterfunken ...",
+   "Deutschland einig Vaterland ..."
+  ]
+ },
+ {
+  "nr": 41,
+  "id": 17237,
+  "correct": 0,
+  "answers": [
+   "weil dadurch die unterschiedlichen Meinungen der Bürger und Bürgerinnen vertreten werden",
+   "damit Bestechung in der Politik begrenzt wird",
+   "um politische Demonstrationen zu verhindern",
+   "um wirtschaftlichen Wettbewerb anzuregen"
+  ]
+ },
+ {
+  "nr": 42,
+  "id": 17269,
+  "correct": 1,
+  "answers": [
+   "die Regierung",
+   "das Parlament",
+   "die Gerichte",
+   "die Polizei"
+  ]
+ },
+ {
+  "nr": 43,
+  "id": 17236,
+  "correct": 1,
+  "answers": [
+   "wenn ihr Wahlkampf zu teuer ist",
+   "wenn sie gegen die Verfassung kämpft",
+   "wenn sie Kritik am Staatsoberhaupt äußert",
+   "wenn ihr Programm eine neue Richtung vorschlägt"
+  ]
+ },
+ {
+  "nr": 44,
+  "id": 17433,
+  "correct": 1,
+  "answers": [
+   "Abgeordnete des EU-Parlaments",
+   "den Bundespräsidenten / die Bundespräsidentin",
+   "Landtagsabgeordnete",
+   "Bundestagsabgeordnete"
+  ]
+ },
+ {
+  "nr": 45,
+  "id": 17231,
+  "correct": 0,
+  "answers": [
+   "Sozialversicherung",
+   "Unfallversicherung",
+   "Hausratversicherung",
+   "Haftpflicht- und Feuerversicherung"
+  ]
+ },
+ {
+  "nr": 46,
+  "id": 17206,
+  "correct": 0,
+  "answers": [
+   "Er baut Straßen und Schulen.",
+   "Er verkauft Lebensmittel und Kleidung.",
+   "Er versorgt alle Einwohner und Einwohnerinnen kostenlos mit Zeitungen.",
+   "Er produziert Autos und Busse."
+  ]
+ },
+ {
+  "nr": 47,
+  "id": 17259,
+  "correct": 0,
+  "answers": [
+   "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+   "Er zahlt Kindergeld.",
+   "Er unterstützt Museen.",
+   "Er fördert Sportler und Sportlerinnen."
+  ]
+ },
+ {
+  "nr": 48,
+  "id": 17258,
+  "correct": 2,
+  "answers": [
+   "der Bundesrat",
+   "der Bundespräsident / die Bundespräsidentin",
+   "die Bürgerversammlung",
+   "die Regierung"
+  ]
+ },
+ {
+  "nr": 49,
+  "id": 17208,
+  "correct": 1,
+  "answers": [
+   "die Lehrer und Lehrerinnen",
+   "die Bundesländer",
+   "das Familienministerium",
+   "die Universitäten"
+  ]
+ },
+ {
+  "nr": 50,
+  "id": 17225,
+  "correct": 1,
+  "answers": [
+   "freie Zentralwirtschaft.",
+   "soziale Marktwirtschaft.",
+   "gelenkte Zentralwirtschaft.",
+   "Planwirtschaft."
+  ]
+ },
+ {
+  "nr": 51,
+  "id": 17229,
+  "correct": 2,
+  "answers": [
+   "Menschen sich kritisch über die Regierung äußern können.",
+   "Bürger friedlich demonstrieren gehen dürfen.",
+   "Menschen von einer Privatpolizei ohne Grund verhaftet werden.",
+   "jemand ein Verbrechen begeht und deshalb verhaftet wird."
+  ]
+ },
+ {
+  "nr": 52,
+  "id": 17226,
+  "correct": 0,
+  "answers": [
+   "Volke aus.",
+   "Bundestag aus.",
+   "preußischen König aus.",
+   "Bundesverfassungsgericht aus."
+  ]
+ },
+ {
+  "nr": 53,
+  "id": 17235,
+  "correct": 3,
+  "answers": [
+   "Der Staat hat Recht.",
+   "Es gibt nur rechte Parteien.",
+   "Die Bürger und Bürgerinnen entscheiden über Gesetze.",
+   "Der Staat muss die Gesetze einhalten."
+  ]
+ },
+ {
+  "nr": 54,
+  "id": 17238,
+  "correct": 3,
+  "answers": [
+   "Legislative",
+   "Judikative",
+   "Exekutive",
+   "Direktive"
+  ]
+ },
+ {
+  "nr": 55,
+  "id": 17234,
+  "correct": 0,
+  "answers": [
+   "den Bundestagssitz in Berlin",
+   "das Bundesverfassungsgericht in Karlsruhe",
+   "das Bundesratsgebäude in Berlin",
+   "das Bundeskanzleramt in Berlin"
+  ]
+ },
+ {
+  "nr": 56,
+  "id": 17222,
+  "correct": 1,
+  "answers": [
+   "Pfarramt",
+   "Ordnungsamt",
+   "Finanzamt",
+   "Auswärtiges Amt"
+  ]
+ },
+ {
+  "nr": 57,
+  "id": 17266,
+  "correct": 3,
+  "answers": [
+   "der / die älteste Abgeordnete im Parlament",
+   "der Ministerpräsident / die Ministerpräsidentin des größten Bundeslandes",
+   "ein ehemaliger Bundeskanzler / eine ehemalige Bundeskanzlerin",
+   "ein Abgeordneter / eine Abgeordnete der stärksten Fraktion"
+  ]
+ },
+ {
+  "nr": 58,
+  "id": 17268,
+  "correct": 1,
+  "answers": [
+   "der Präsident / die Präsidentin des Bundesverfassungsgerichtes",
+   "der Bundespräsident / die Bundespräsidentin",
+   "der Bundesratspräsident / die Bundesratspräsidentin",
+   "der Bundestagspräsident / die Bundestagspräsidentin"
+  ]
+ },
+ {
+  "nr": 59,
+  "id": 17275,
+  "correct": 3,
+  "answers": [
+   "vor etwa 300 Jahren",
+   "vor etwa 700 Jahren",
+   "vor etwa 1150 Jahren",
+   "vor etwa 1700 Jahren"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 60,
+  "id": 17205,
+  "correct": 1,
+  "answers": [
+   "Exekutive.",
+   "Legislative.",
+   "Direktive.",
+   "Judikative."
+  ]
+ },
+ {
+  "nr": 61,
+  "id": 17276,
+  "correct": 3,
+  "answers": [
+   "Der König / die Königin herrscht über das Volk.",
+   "Das Bundesverfassungsgericht steht über der Verfassung.",
+   "Die Interessenverbände üben die Souveränität zusammen mit der Regierung aus.",
+   "Die Staatsgewalt geht vom Volke aus."
+  ]
+ },
+ {
+  "nr": 62,
+  "id": 17223,
+  "correct": 1,
+  "answers": [
+   "Kommunalwahl.",
+   "Landtagswahl.",
+   "Europawahl.",
+   "Bundestagswahl."
+  ]
+ },
+ {
+  "nr": 63,
+  "id": 17204,
+  "correct": 1,
+  "answers": [
+   "die Polizei",
+   "die Gerichte",
+   "das Finanzamt",
+   "die Ministerien"
+  ]
+ },
+ {
+  "nr": 64,
+  "id": 17221,
+  "correct": 3,
+  "answers": [
+   "vier Besatzungszonen.",
+   "einen Oststaat und einen Weststaat.",
+   "16 Kantone.",
+   "Bund, Länder und Kommunen."
+  ]
+ },
+ {
+  "nr": 65,
+  "id": 17267,
+  "correct": 3,
+  "answers": [
+   "Gesetze zu entwerfen.",
+   "die Bundesregierung zu kontrollieren.",
+   "den Bundeskanzler / die Bundeskanzlerin zu wählen.",
+   "das Bundeskabinett zu bilden."
+  ]
+ },
+ {
+  "nr": 66,
+  "id": 17219,
+  "correct": 0,
+  "answers": [
+   "Berlin und München",
+   "Hamburg und Essen",
+   "Nürnberg und Stuttgart",
+   "Worms und Speyer"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 67,
+  "id": 17211,
+  "correct": 3,
+  "answers": [
+   "Verteidigungspolitik",
+   "Außenpolitik",
+   "Wirtschaftspolitik",
+   "Schulpolitik"
+  ]
+ },
+ {
+  "nr": 68,
+  "id": 17257,
+  "correct": 3,
+  "answers": [
+   "weil es in Deutschland nur staatliche Schulen gibt",
+   "weil alle Schüler und Schülerinnen einen Schulabschluss haben müssen",
+   "weil es in den Bundesländern verschiedene Schulen gibt",
+   "weil es nach dem Grundgesetz seine Aufgabe ist"
+  ]
+ },
+ {
+  "nr": 69,
+  "id": 17210,
+  "correct": 2,
+  "answers": [
+   "Stadträte",
+   "Landräte",
+   "Gemeinden",
+   "Bezirksämter"
+  ]
+ },
+ {
+  "nr": 70,
+  "id": 17212,
+  "correct": 3,
+  "answers": [
+   "Er / Sie führt die Regierungsgeschäfte.",
+   "Er / Sie kontrolliert die Regierungspartei.",
+   "Er / Sie wählt die Minister / Ministerinnen aus.",
+   "Er / Sie schlägt den Kanzler / die Kanzlerin zur Wahl vor."
+  ]
+ },
+ {
+  "nr": 71,
+  "id": 17647,
+  "correct": 3,
+  "answers": [
+   "in Bonn, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",
+   "auf Schloss Meseberg, dem Gästehaus der Bundesregierung, um Staatsgäste zu empfangen.",
+   "auf Schloss Bellevue, dem Amtssitz des Bundespräsidenten / der Bundespräsidentin, um Staatsgäste zu empfangen.",
+   "in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden."
+  ]
+ },
+ {
+  "nr": 72,
+  "id": 17640,
+  "correct": 3,
+  "answers": [
+   "Gerhard Schröder",
+   "Angela Merkel",
+   "Ursula von der Leyen",
+   "Friedrich Merz"
+  ]
+ },
+ {
+  "nr": 73,
+  "id": 17218,
+  "correct": 0,
+  "answers": [
+   "CDU/CSU und AfD.",
+   "Die Linke und Bündnis 90/Die Grünen.",
+   "Bündnis 90/Die Grünen und SPD.",
+   "Die Linke und CDU/CSU."
+  ]
+ },
+ {
+  "nr": 74,
+  "id": 17634,
+  "correct": 2,
+  "answers": [
+   "Bundesversammlung",
+   "Volkskammer",
+   "Bundestag",
+   "Bundesgerichtshof"
+  ]
+ },
+ {
+  "nr": 75,
+  "id": 17241,
+  "correct": 0,
+  "answers": [
+   "Frank-Walter Steinmeier",
+   "Bärbel Bas",
+   "Bodo Ramelow",
+   "Joachim Gauck"
+  ]
+ },
+ {
+  "nr": 76,
+  "id": 17654,
+  "correct": 3,
+  "answers": [
+   "Christliche Deutsche Union",
+   "Club Deutscher Unternehmer",
+   "Christlicher Deutscher Umweltschutz",
+   "Christlich Demokratische Union"
+  ]
+ },
+ {
+  "nr": 77,
+  "id": 17656,
+  "correct": 3,
+  "answers": [
+   "die deutsche Polizei",
+   "ein deutscher Hafen",
+   "eine deutsche Bürgerinitiative",
+   "die deutsche Armee"
+  ]
+ },
+ {
+  "nr": 78,
+  "id": 17649,
+  "correct": 2,
+  "answers": [
+   "Sozialistische Partei Deutschlands",
+   "Sozialpolitische Partei Deutschlands",
+   "Sozialdemokratische Partei Deutschlands",
+   "Sozialgerechte Partei Deutschlands"
+  ]
+ },
+ {
+  "nr": 79,
+  "id": 17217,
+  "correct": 3,
+  "answers": [
+   "Friedliche Demonstrative Partei",
+   "Freie Deutschland Partei",
+   "Führende Demokratische Partei",
+   "Freie Demokratische Partei"
+  ]
+ },
+ {
+  "nr": 80,
+  "id": 17646,
+  "correct": 2,
+  "answers": [
+   "Oberlandesgericht",
+   "Amtsgericht",
+   "Bundesverfassungsgericht",
+   "Verwaltungsgericht"
+  ]
+ },
+ {
+  "nr": 81,
+  "id": 17633,
+  "correct": 3,
+  "answers": [
+   "der Bundesrat",
+   "die Bundesversammlung",
+   "das Volk",
+   "der Bundestag"
+  ]
+ },
+ {
+  "nr": 82,
+  "id": 17658,
+  "correct": 3,
+  "answers": [
+   "der Bundestagspräsident / die Bundestagspräsidentin",
+   "der Bundespräsident / die Bundespräsidentin",
+   "der Bundesratspräsident / die Bundesratspräsidentin",
+   "der Bundeskanzler / die Bundeskanzlerin"
+  ]
+ },
+ {
+  "nr": 83,
+  "id": 17626,
+  "correct": 2,
+  "answers": [
+   "das Volk",
+   "die Bundesversammlung",
+   "der Bundestag",
+   "die Bundesregierung"
+  ]
+ },
+ {
+  "nr": 84,
+  "id": 17625,
+  "correct": 2,
+  "answers": [
+   "regiert das Land.",
+   "entwirft die Gesetze.",
+   "repräsentiert das Land.",
+   "überwacht die Einhaltung der Gesetze."
+  ]
+ },
+ {
+  "nr": 85,
+  "id": 17657,
+  "correct": 2,
+  "answers": [
+   "die Abgeordneten des Bundestages",
+   "die Minister und Ministerinnen der Bundesregierung",
+   "die Regierungsvertreter der Bundesländer",
+   "die Parteimitglieder"
+  ]
+ },
+ {
+  "nr": 86,
+  "id": 17632,
+  "correct": 0,
+  "answers": [
+   "die Bundesversammlung",
+   "der Bundesrat",
+   "das Bundesparlament",
+   "das Bundesverfassungsgericht"
+  ]
+ },
+ {
+  "nr": 87,
+  "id": 17639,
+  "correct": 1,
+  "answers": [
+   "der Bundeskanzler / die Bundeskanzlerin",
+   "der Bundespräsident / die Bundespräsidentin",
+   "der Bundesratspräsident / die Bundesratspräsidentin",
+   "der Bundestagspräsident / die Bundestagspräsidentin"
+  ]
+ },
+ {
+  "nr": 88,
+  "id": 17635,
+  "correct": 0,
+  "answers": [
+   "kontrolliert die Regierung.",
+   "entscheidet, wer Bundesminister / Bundesministerin wird.",
+   "bestimmt, wer im Bundesrat sitzt.",
+   "schlägt die Regierungschefs / Regierungschefinnen der Länder vor."
+  ]
+ },
+ {
+  "nr": 89,
+  "id": 17648,
+  "correct": 2,
+  "answers": [
+   "Verband",
+   "Ältestenrat",
+   "Fraktion",
+   "Opposition"
+  ]
+ },
+ {
+  "nr": 90,
+  "id": 17631,
+  "correct": 0,
+  "answers": [
+   "den Bundesrat.",
+   "die Bundesversammlung.",
+   "den Bundestag.",
+   "die Bundesregierung."
+  ]
+ },
+ {
+  "nr": 91,
+  "id": 17641,
+  "correct": 2,
+  "answers": [
+   "schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.",
+   "leichter, wenn dadurch neue Parteien in den Bundesrat kommen.",
+   "schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",
+   "leichter, wenn es sich um ein reiches Bundesland handelt."
+  ]
+ },
+ {
+  "nr": 92,
+  "id": 17655,
+  "correct": 3,
+  "answers": [
+   "Christlich Sichere Union",
+   "Christlich Süddeutsche Union",
+   "Christlich Sozialer Unternehmerverband",
+   "Christlich Soziale Union"
+  ]
+ },
+ {
+  "nr": 93,
+  "id": 17608,
+  "correct": 3,
+  "answers": [
+   "weniger Erststimmen kann sie haben.",
+   "mehr Direktkandidaten der Partei ziehen ins Parlament ein.",
+   "größer ist das Risiko, eine Koalition bilden zu müssen.",
+   "mehr Sitze erhält die Partei im Parlament."
+  ]
+ },
+ {
+  "nr": 94,
+  "id": 17591,
+  "correct": 1,
+  "answers": [
+   "16",
+   "18",
+   "21",
+   "23"
+  ]
+ },
+ {
+  "nr": 95,
+  "id": 17659,
+  "correct": 1,
+  "answers": [
+   "Wahlpflicht",
+   "Schulpflicht",
+   "Schweigepflicht",
+   "Religionspflicht"
+  ]
+ },
+ {
+  "nr": 96,
+  "id": 17586,
+  "correct": 3,
+  "answers": [
+   "Kürzung sozialer Leistungen",
+   "bis zu 100 Sozialstunden",
+   "gar nicht, Holocaustleugnung ist erlaubt",
+   "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 97,
+  "id": 17587,
+  "correct": 0,
+  "answers": [
+   "Sozialversicherung",
+   "Sozialhilfe",
+   "Kindergeld",
+   "Wohngeld"
+  ]
+ },
+ {
+  "nr": 98,
+  "id": 17260,
+  "correct": 1,
+  "answers": [
+   "dürfen sie nicht mehr an den Sitzungen des Parlaments teilnehmen.",
+   "kann die Regierung ihre Mehrheit verlieren.",
+   "muss der Bundespräsident / die Bundespräsidentin zuvor sein / ihr Einverständnis geben.",
+   "dürfen die Wähler / Wählerinnen dieser Abgeordneten noch einmal wählen."
+  ]
+ },
+ {
+  "nr": 99,
+  "id": 17588,
+  "correct": 0,
+  "answers": [
+   "Arbeitgeber / Arbeitgeberinnen und Arbeitnehmer / Arbeitnehmerinnen",
+   "nur Arbeitnehmer / Arbeitnehmerinnen",
+   "alle Staatsangehörigen",
+   "nur Arbeitgeber / Arbeitgeberinnen"
+  ]
+ },
+ {
+  "nr": 100,
+  "id": 17263,
+  "correct": 0,
+  "answers": [
+   "die Lebensversicherung",
+   "die gesetzliche Rentenversicherung",
+   "die Arbeitslosenversicherung",
+   "die Pflegeversicherung"
+  ]
+ },
+ {
+  "nr": 101,
+  "id": 17589,
+  "correct": 1,
+  "answers": [
+   "Jugendlichen.",
+   "Arbeitnehmer und Arbeitnehmerinnen.",
+   "Rentner und Rentnerinnen.",
+   "Arbeitgeber und Arbeitgeberinnen."
+  ]
+ },
+ {
+  "nr": 102,
+  "id": 17624,
+  "correct": 0,
+  "answers": [
+   "Bundesverdienstkreuz",
+   "Bundesadler",
+   "Vaterländischen Verdienstorden",
+   "Ehrentitel \"Held der Deutschen Demokratischen Republik\""
+  ]
+ },
+ {
+  "nr": 103,
+  "id": 17261,
+  "correct": 1,
+  "answers": [
+   "der Bundestagsfraktionen von CDU und CSU",
+   "von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",
+   "von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung",
+   "der Bundestagsfraktionen von CDU und SPD"
+  ]
+ },
+ {
+  "nr": 104,
+  "id": 17590,
+  "correct": 3,
+  "answers": [
+   "Die Frau ist lange krank und arbeitsunfähig.",
+   "Die Frau kam oft zu spät zur Arbeit.",
+   "Die Frau erledigt private Sachen während der Arbeitszeit.",
+   "Die Frau bekommt ein Kind und ihr Chef weiß das."
+  ]
+ },
+ {
+  "nr": 105,
+  "id": 17585,
+  "correct": 3,
+  "answers": [
+   "Sie helfen alten Menschen bei der Stimmabgabe in der Wahlkabine.",
+   "Sie schreiben die Wahlbenachrichtigungen vor der Wahl.",
+   "Sie geben Zwischenergebnisse an die Medien weiter.",
+   "Sie zählen die Stimmen nach dem Ende der Wahl."
+  ]
+ },
+ {
+  "nr": 106,
+  "id": 17584,
+  "correct": 3,
+  "answers": [
+   "Sie helfen Kindern und alten Menschen beim Wählen.",
+   "Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.",
+   "Sie geben Zwischenergebnisse an Journalisten weiter.",
+   "Sie zählen die Stimmen nach dem Ende der Wahl."
+  ]
+ },
+ {
+  "nr": 107,
+  "id": 17610,
+  "correct": 1,
+  "answers": [
+   "2 Jahre",
+   "4 Jahre",
+   "6 Jahre",
+   "8 Jahre"
+  ]
+ },
+ {
+  "nr": 108,
+  "id": 17598,
+  "correct": 1,
+  "answers": [
+   "in der Bundesrepublik Deutschland wohnt und wählen möchte.",
+   "Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 18 Jahre alt ist.",
+   "seit mindestens 3 Jahren in der Bundesrepublik Deutschland lebt.",
+   "Bürger / Bürgerin der Bundesrepublik Deutschland ist und mindestens 21 Jahre alt ist."
+  ]
+ },
+ {
+  "nr": 109,
+  "id": 17612,
+  "correct": 1,
+  "answers": [
+   "alle drei Jahre",
+   "alle vier Jahre",
+   "alle fünf Jahre",
+   "alle sechs Jahre"
+  ]
+ },
+ {
+  "nr": 110,
+  "id": 17611,
+  "correct": 2,
+  "answers": [
+   "2 Jahre",
+   "3 Jahre",
+   "4 Jahre",
+   "5 Jahre"
+  ]
+ },
+ {
+  "nr": 111,
+  "id": 17602,
+  "correct": 3,
+  "answers": [
+   "die Politik Israels öffentlich kritisieren",
+   "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück",
+   "eine Diskussion über die Politik Israels",
+   "der öffentliche Aufruf zur Vernichtung Israels"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 112,
+  "id": 17615,
+  "correct": 1,
+  "answers": [
+   "speziell.",
+   "geheim.",
+   "berufsbezogen.",
+   "geschlechtsabhängig."
+  ]
+ },
+ {
+  "nr": 113,
+  "id": 17613,
+  "correct": 0,
+  "answers": [
+   "die meisten Stimmen bekommt.",
+   "die meisten Männer mehrheitlich gewählt haben.",
+   "die meisten Stimmen bei den Arbeitern / Arbeiterinnen bekommen hat.",
+   "die meisten Erststimmen für ihren Kanzlerkandidaten / ihre Kanzlerkandidatin erhalten hat."
+  ]
+ },
+ {
+  "nr": 114,
+  "id": 17596,
+  "correct": 1,
+  "answers": [
+   "eine Pflicht.",
+   "ein Recht.",
+   "ein Zwang.",
+   "eine Last."
+  ]
+ },
+ {
+  "nr": 115,
+  "id": 17614,
+  "correct": 2,
+  "answers": [
+   "Man kann gewählt werden.",
+   "Man muss wählen gehen.",
+   "Man kann wählen.",
+   "Man muss zur Auszählung der Stimmen gehen."
+  ]
+ },
+ {
+  "nr": 116,
+  "id": 17594,
+  "correct": 3,
+  "answers": [
+   "aktive Wahlkampagne.",
+   "aktives Wahlverfahren.",
+   "aktiver Wahlkampf.",
+   "aktives Wahlrecht."
+  ]
+ },
+ {
+  "nr": 117,
+  "id": 17605,
+  "correct": 2,
+  "answers": [
+   "3%",
+   "4%",
+   "5%",
+   "6%"
+  ]
+ },
+ {
+  "nr": 118,
+  "id": 17600,
+  "correct": 3,
+  "answers": [
+   "nur Deutsche",
+   "nur Israelis",
+   "nur religiöse Menschen",
+   "alle Menschen"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 119,
+  "id": 17601,
+  "correct": 2,
+  "answers": [
+   "Alle verurteilten Straftäter / Straftäterinnen dürfen nicht wählen.",
+   "Wenn ich wählen gehen möchte, muss mein Arbeitgeber / meine Arbeitgeberin mir frei geben.",
+   "Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.",
+   "Ich kann frei entscheiden, wo ich wählen gehen möchte."
+  ]
+ },
+ {
+  "nr": 120,
+  "id": 17607,
+  "correct": 2,
+  "answers": [
+   "Zensuswahlrecht.",
+   "Dreiklassenwahlrecht.",
+   "Mehrheits- und Verhältniswahlrecht.",
+   "allgemeines Männerwahlrecht."
+  ]
+ },
+ {
+  "nr": 121,
+  "id": 17595,
+  "correct": 0,
+  "answers": [
+   "5%-Hürde.",
+   "Zulassungsgrenze.",
+   "Basiswert.",
+   "Richtlinie."
+  ]
+ },
+ {
+  "nr": 122,
+  "id": 17603,
+  "correct": 0,
+  "answers": [
+   "frei, gleich, geheim.",
+   "offen, sicher, frei.",
+   "geschlossen, gleich, sicher.",
+   "sicher, offen, freiwillig."
+  ]
+ },
+ {
+  "nr": 123,
+  "id": 17604,
+  "correct": 2,
+  "answers": [
+   "Abstimmungsregelung im Bundestag für kleine Parteien",
+   "Anwesenheitskontrolle im Bundestag für Abstimmungen",
+   "Mindestanteil an Wählerstimmen, um ins Parlament zu kommen",
+   "Anwesenheitskontrolle im Bundesrat für Abstimmungen"
+  ]
+ },
+ {
+  "nr": 124,
+  "id": 17597,
+  "correct": 2,
+  "answers": [
+   "des Bundeskanzlers / der Bundeskanzlerin.",
+   "der Parlamente der Länder.",
+   "des Parlaments für Deutschland.",
+   "des Bundespräsidenten / der Bundespräsidentin."
+  ]
+ },
+ {
+  "nr": 125,
+  "id": 17606,
+  "correct": 1,
+  "answers": [
+   "die Bürger und Bürgerinnen zu zwingen, ihre Stimme abzugeben.",
+   "nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.",
+   "im Land bestehende Gesetze beizubehalten.",
+   "den Armen mehr Macht zu geben."
+  ]
+ },
+ {
+  "nr": 126,
+  "id": 17599,
+  "correct": 0,
+  "answers": [
+   "eine Wahlbenachrichtigung von der Gemeinde",
+   "eine Wahlerlaubnis vom Bundespräsidenten / von der Bundespräsidentin",
+   "eine Benachrichtigung von der Bundesversammlung",
+   "eine Benachrichtigung vom Pfarramt"
+  ]
+ },
+ {
+  "nr": 127,
+  "id": 17593,
+  "correct": 2,
+  "answers": [
+   "die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.",
+   "die Bürger und Bürgerinnen bei vielen kleinen Parteien die Orientierung verlieren können.",
+   "viele kleine Parteien die Regierungsbildung erschweren.",
+   "die kleinen Parteien nicht so viel Geld haben, um die Politiker und Politikerinnen zu bezahlen."
+  ]
+ },
+ {
+  "nr": 128,
+  "id": 17609,
+  "correct": 0,
+  "answers": [
+   "Abgeordnete.",
+   "Kanzler / Kanzlerinnen.",
+   "Botschafter / Botschafterinnen.",
+   "Ministerpräsidenten / Ministerpräsidentinnen."
+  ]
+ },
+ {
+  "nr": 129,
+  "id": 17616,
+  "correct": 2,
+  "answers": [
+   "der Bundeskanzler / die Bundeskanzlerin.",
+   "der Ministerpräsident / die Ministerpräsidentin eines Bundeslandes.",
+   "der Bundestag.",
+   "der Bundespräsident / die Bundespräsidentin."
+  ]
+ },
+ {
+  "nr": 130,
+  "id": 17617,
+  "correct": 0,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 131,
+  "id": 17623,
+  "correct": 2,
+  "answers": [
+   "der Leiter / die Leiterin einer Schule.",
+   "der Chef / die Chefin einer Bank.",
+   "das Oberhaupt einer Gemeinde.",
+   "der / die Vorsitzende einer Partei."
+  ]
+ },
+ {
+  "nr": 132,
+  "id": 17620,
+  "correct": 1,
+  "answers": [
+   "Sie arbeiten als Soldaten / Soldatinnen.",
+   "Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.",
+   "Sie arbeiten in der Bundesregierung.",
+   "Sie arbeiten in einem Krankenhaus und verdienen dabei Geld."
+  ]
+ },
+ {
+  "nr": 133,
+  "id": 17618,
+  "correct": 1,
+  "answers": [
+   "Der Ehemann wählt für seine Frau mit.",
+   "Man kann durch Briefwahl seine Stimme abgeben.",
+   "Man kann am Wahltag telefonisch seine Stimme abgeben.",
+   "Kinder ab dem Alter von 14 Jahren dürfen wählen."
+  ]
+ },
+ {
+  "nr": 134,
+  "id": 17621,
+  "correct": 0,
+  "answers": [
+   "Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.",
+   "Ich werde Mitglied in einem Sportverein und trainiere Radfahren.",
+   "Ich wende mich an das Finanzamt, weil ich als Steuerzahler / Steuerzahlerin ein Recht auf die Buslinie habe.",
+   "Ich schreibe einen Brief an das Forstamt der Gemeinde."
+  ]
+ },
+ {
+  "nr": 135,
+  "id": 17622,
+  "correct": 3,
+  "answers": [
+   "große Unternehmen",
+   "kleine Unternehmen",
+   "Selbständige",
+   "Arbeitnehmer und Arbeitnehmerinnen"
+  ]
+ },
+ {
+  "nr": 136,
+  "id": 17651,
+  "correct": 1,
+  "answers": [
+   "falscher Nebenkostenabrechnung.",
+   "ungerechtfertigter Kündigung durch Ihren Chef / Ihre Chefin.",
+   "Problemen mit den Nachbarn / Nachbarinnen.",
+   "Schwierigkeiten nach einem Verkehrsunfall."
+  ]
+ },
+ {
+  "nr": 137,
+  "id": 17650,
+  "correct": 2,
+  "answers": [
+   "das Familiengericht",
+   "das Strafgericht",
+   "das Arbeitsgericht",
+   "das Amtsgericht"
+  ]
+ },
+ {
+  "nr": 138,
+  "id": 17644,
+  "correct": 2,
+  "answers": [
+   "weiter arbeiten und freundlich zum Chef / zur Chefin sein",
+   "ein Mahnverfahren gegen den Arbeitgeber / die Arbeitgeberin führen",
+   "Kündigungsschutzklage erheben",
+   "den Arbeitgeber / die Arbeitgeberin bei der Polizei anzeigen"
+  ]
+ },
+ {
+  "nr": 139,
+  "id": 17630,
+  "correct": 1,
+  "answers": [
+   "zu einer anderen Religion übertritt.",
+   "eine Straftat begangen hat und angeklagt wird.",
+   "eine andere Meinung als die der Regierung vertritt.",
+   "sein Auto falsch geparkt hat und es abgeschleppt wird."
+  ]
+ },
+ {
+  "nr": 140,
+  "id": 17636,
+  "correct": 0,
+  "answers": [
+   "entscheidet mit Richtern / Richterinnen über Schuld und Strafe.",
+   "gibt Bürgern / Bürgerinnen rechtlichen Rat.",
+   "stellt Urkunden aus.",
+   "verteidigt den Angeklagten / die Angeklagte."
+  ]
+ },
+ {
+  "nr": 141,
+  "id": 17652,
+  "correct": 0,
+  "answers": [
+   "ein Rechtsanwalt / eine Rechtsanwältin",
+   "ein Richter / eine Richterin",
+   "ein Schöffe / eine Schöffin",
+   "ein Staatsanwalt / eine Staatsanwältin"
+  ]
+ },
+ {
+  "nr": 142,
+  "id": 17637,
+  "correct": 1,
+  "answers": [
+   "vertritt Bürger und Bürgerinnen vor einem Gericht.",
+   "arbeitet an einem Gericht und spricht Urteile.",
+   "ändert Gesetze.",
+   "betreut Jugendliche vor Gericht."
+  ]
+ },
+ {
+  "nr": 143,
+  "id": 17628,
+  "correct": 0,
+  "answers": [
+   "Judikative.",
+   "Exekutive.",
+   "Operative.",
+   "Legislative."
+  ]
+ },
+ {
+  "nr": 144,
+  "id": 17627,
+  "correct": 1,
+  "answers": [
+   "vollziehenden Gewalt.",
+   "rechtsprechenden Gewalt.",
+   "planenden Gewalt.",
+   "gesetzgebenden Gewalt."
+  ]
+ },
+ {
+  "nr": 145,
+  "id": 17638,
+  "correct": 0,
+  "answers": [
+   "Judikative",
+   "Exekutive",
+   "Presse",
+   "Legislative"
+  ]
+ },
+ {
+  "nr": 146,
+  "id": 17653,
+  "correct": 3,
+  "answers": [
+   "Programm",
+   "Prozedur",
+   "Protokoll",
+   "Prozess"
+  ]
+ },
+ {
+  "nr": 147,
+  "id": 17629,
+  "correct": 1,
+  "answers": [
+   "Deutschland regieren",
+   "Recht sprechen",
+   "Pläne erstellen",
+   "Gesetze erlassen"
+  ]
+ },
+ {
+  "nr": 148,
+  "id": 17643,
+  "correct": 3,
+  "answers": [
+   "das Land zu verteidigen",
+   "die Bürgerinnen und Bürger abzuhören",
+   "die Gesetze zu beschließen",
+   "die Einhaltung von Gesetzen zu überwachen"
+  ]
+ },
+ {
+  "nr": 149,
+  "id": 17645,
+  "correct": 2,
+  "answers": [
+   "ein jüdisches Fest besuchen",
+   "die israelische Regierung kritisieren",
+   "den Holocaust leugnen",
+   "gegen Juden Fußball spielen"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 150,
+  "id": 17642,
+  "correct": 1,
+  "answers": [
+   "der Stellvertreter / die Stellvertreterin des Stadtoberhaupts.",
+   "ein ehrenamtlicher Richter / eine ehrenamtliche Richterin.",
+   "ein Mitglied eines Gemeinderats.",
+   "eine Person, die Jura studiert hat."
+  ]
+ },
+ {
+  "nr": 151,
+  "id": 17446,
+  "correct": 1,
+  "answers": [
+   "Großbritannien",
+   "die DDR",
+   "die Bundesrepublik Deutschland",
+   "die USA"
+  ]
+ },
+ {
+  "nr": 152,
+  "id": 17357,
+  "correct": 2,
+  "answers": [
+   "1918 bis 1923",
+   "1932 bis 1950",
+   "1933 bis 1945",
+   "1945 bis 1989"
+  ]
+ },
+ {
+  "nr": 153,
+  "id": 17333,
+  "correct": 3,
+  "answers": [
+   "Tod Adolf Hitlers",
+   "Beginn des Berliner Mauerbaus",
+   "Wahl von Konrad Adenauer zum Bundeskanzler",
+   "Ende des Zweiten Weltkriegs in Europa"
+  ]
+ },
+ {
+  "nr": 154,
+  "id": 17331,
+  "correct": 1,
+  "answers": [
+   "1933",
+   "1945",
+   "1949",
+   "1961"
+  ]
+ },
+ {
+  "nr": 155,
+  "id": 17334,
+  "correct": 2,
+  "answers": [
+   "1888 bis 1918",
+   "1921 bis 1934",
+   "1933 bis 1945",
+   "1949 bis 1963"
+  ]
+ },
+ {
+  "nr": 156,
+  "id": 17310,
+  "correct": 2,
+  "answers": [
+   "1923",
+   "1927",
+   "1933",
+   "1936"
+  ]
+ },
+ {
+  "nr": 157,
+  "id": 17549,
+  "correct": 0,
+  "answers": [
+   "eine Diktatur.",
+   "einen demokratischen Staat.",
+   "eine Monarchie.",
+   "ein Fürstentum."
+  ]
+ },
+ {
+  "nr": 158,
+  "id": 17307,
+  "correct": 0,
+  "answers": [
+   "Diktatur.",
+   "Demokratie.",
+   "Monarchie.",
+   "Räterepublik."
+  ]
+ },
+ {
+  "nr": 159,
+  "id": 17332,
+  "correct": 0,
+  "answers": [
+   "freie Wahlen",
+   "Pressezensur",
+   "willkürliche Verhaftungen",
+   "Verfolgung der Juden"
+  ]
+ },
+ {
+  "nr": 160,
+  "id": 17308,
+  "correct": 1,
+  "answers": [
+   "der Erste Weltkrieg",
+   "der Zweite Weltkrieg",
+   "der Vietnamkrieg",
+   "der Golfkrieg"
+  ]
+ },
+ {
+  "nr": 161,
+  "id": 17354,
+  "correct": 0,
+  "answers": [
+   "des staatlichen Rassismus",
+   "der Meinungsfreiheit",
+   "der allgemeinen Religionsfreiheit",
+   "der Entwicklung der Demokratie"
+  ]
+ },
+ {
+  "nr": 162,
+  "id": 17306,
+  "correct": 3,
+  "answers": [
+   "eine Goldmedaille bei den Olympischen Spielen 1936.",
+   "den Bau des Reichstagsgebäudes.",
+   "den Aufbau der Wehrmacht.",
+   "das Attentat auf Hitler am 20. Juli 1944."
+  ]
+ },
+ {
+  "nr": 163,
+  "id": 17330,
+  "correct": 2,
+  "answers": [
+   "1925",
+   "1930",
+   "1938",
+   "1945"
+  ]
+ },
+ {
+  "nr": 164,
+  "id": 17309,
+  "correct": 2,
+  "answers": [
+   "Mit dem Angriff auf Polen beginnt der Zweite Weltkrieg.",
+   "Die Nationalsozialisten verlieren eine Wahl und lösen den Reichstag auf.",
+   "Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört.",
+   "Hitler wird Reichspräsident und lässt alle Parteien verbieten."
+  ]
+ },
+ {
+  "nr": 165,
+  "id": 17426,
+  "correct": 0,
+  "answers": [
+   "Konrad Adenauer",
+   "Kurt Georg Kiesinger",
+   "Helmut Schmidt",
+   "Willy Brandt"
+  ]
+ },
+ {
+  "nr": 166,
+  "id": 17465,
+  "correct": 3,
+  "answers": [
+   "beim Arbeiteraufstand 1953 in der DDR",
+   "bei den Demonstrationen 1968 in der Bundesrepublik Deutschland",
+   "bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland",
+   "bei den Montagsdemonstrationen 1989 in der DDR"
+  ]
+ },
+ {
+  "nr": 167,
+  "id": 17355,
+  "correct": 3,
+  "answers": [
+   "Sowjetunion, Großbritannien, Polen, Schweden",
+   "Frankreich, Sowjetunion, Italien, Japan",
+   "USA, Sowjetunion, Spanien, Portugal",
+   "USA, Sowjetunion, Großbritannien, Frankreich"
+  ]
+ },
+ {
+  "nr": 168,
+  "id": 17425,
+  "correct": 3,
+  "answers": [
+   "USA",
+   "Sowjetunion",
+   "Frankreich",
+   "Japan"
+  ]
+ },
+ {
+  "nr": 169,
+  "id": 17375,
+  "correct": 2,
+  "answers": [
+   "1939",
+   "1945",
+   "1949",
+   "1951"
+  ]
+ },
+ {
+  "nr": 170,
+  "id": 17290,
+  "correct": 0,
+  "answers": [
+   "das Verbot von Parteien",
+   "das Recht zur freien Entfaltung der Persönlichkeit",
+   "Pressefreiheit",
+   "den Schutz der Menschenwürde"
+  ]
+ },
+ {
+  "nr": 171,
+  "id": 17394,
+  "correct": 3,
+  "answers": [
+   "steuert sich allein nach Angebot und Nachfrage.",
+   "wird vom Staat geplant und gesteuert, Angebot und Nachfrage werden nicht berücksichtigt.",
+   "richtet sich nach der Nachfrage im Ausland.",
+   "richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich."
+  ]
+ },
+ {
+  "nr": 172,
+  "id": 17409,
+  "correct": 3,
+  "answers": [
+   "amerikanischen Besatzungszone",
+   "französischen Besatzungszone",
+   "britischen Besatzungszone",
+   "sowjetischen Besatzungszone"
+  ]
+ },
+ {
+  "nr": 173,
+  "id": 17429,
+  "correct": 2,
+  "answers": [
+   "des Nordatlantikpakts (NATO).",
+   "der Vereinten Nationen (VN).",
+   "der Europäischen Union (EU).",
+   "des Warschauer Pakts."
+  ]
+ },
+ {
+  "nr": 174,
+  "id": 17447,
+  "correct": 1,
+  "answers": [
+   "1947",
+   "1949",
+   "1953",
+   "1956"
+  ]
+ },
+ {
+  "nr": 175,
+  "id": 17445,
+  "correct": 1,
+  "answers": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ]
+ },
+ {
+  "nr": 176,
+  "id": 17379,
+  "correct": 2,
+  "answers": [
+   "1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA",
+   "1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich",
+   "1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich",
+   "1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich"
+  ]
+ },
+ {
+  "nr": 177,
+  "id": 17376,
+  "correct": 1,
+  "answers": [
+   "München",
+   "Berlin",
+   "Dresden",
+   "Frankfurt/Oder"
+  ]
+ },
+ {
+  "nr": 178,
+  "id": 17395,
+  "correct": 3,
+  "answers": [
+   "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
+   "Die amerikanischen Soldaten / Soldatinnen hatten beim Landtransport Angst vor Überfällen.",
+   "Für Großbritannien war die Versorgung über die Luftbrücke schneller.",
+   "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege."
+  ]
+ },
+ {
+  "nr": 179,
+  "id": 17427,
+  "correct": 1,
+  "answers": [
+   "mit dem Tod Adolf Hitlers",
+   "durch die bedingungslose Kapitulation Deutschlands",
+   "mit dem Rückzug der Deutschen aus den besetzten Gebieten",
+   "durch eine Revolution in Deutschland"
+  ]
+ },
+ {
+  "nr": 180,
+  "id": 17378,
+  "correct": 2,
+  "answers": [
+   "Ludwig Erhard.",
+   "Willy Brandt.",
+   "Konrad Adenauer.",
+   "Gerhard Schröder."
+  ]
+ },
+ {
+  "nr": 181,
+  "id": 17428,
+  "correct": 1,
+  "answers": [
+   "Er hat sich den ehemaligen Alliierten unterworfen.",
+   "Er bat Polen und die polnischen Juden um Vergebung.",
+   "Er zeigte seine Demut vor dem Warschauer Pakt.",
+   "Er sprach ein Gebet am Grab des Unbekannten Soldaten."
+  ]
+ },
+ {
+  "nr": 182,
+  "id": 17411,
+  "correct": 2,
+  "answers": [
+   "Basilika",
+   "Moschee",
+   "Synagoge",
+   "Kirche"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 183,
+  "id": 17377,
+  "correct": 1,
+  "answers": [
+   "40er Jahre",
+   "50er Jahre",
+   "70er Jahre",
+   "80er Jahre"
+  ]
+ },
+ {
+  "nr": 184,
+  "id": 17444,
+  "correct": 0,
+  "answers": [
+   "eine Resolution der Vereinten Nationen",
+   "ein Beschluss des Zionistenkongresses",
+   "ein Vorschlag der Bundesregierung",
+   "ein Vorschlag der UdSSR"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 185,
+  "id": 17410,
+  "correct": 0,
+  "answers": [
+   "des Warschauer Pakts gegen den Westen",
+   "Norddeutschlands gegen Süddeutschland",
+   "Nazi-Deutschlands gegen die Alliierten",
+   "Europas gegen die USA"
+  ]
+ },
+ {
+  "nr": 186,
+  "id": 17393,
+  "correct": 1,
+  "answers": [
+   "1. Mai",
+   "17. Juni",
+   "20. Juli",
+   "9. November"
+  ]
+ },
+ {
+  "nr": 187,
+  "id": 17536,
+  "correct": 3,
+  "answers": [
+   "Preußen",
+   "Bundesrepublik Deutschland",
+   "\"Drittes Reich\"",
+   "DDR"
+  ]
+ },
+ {
+  "nr": 188,
+  "id": 17479,
+  "correct": 3,
+  "answers": [
+   "1953",
+   "1956",
+   "1959",
+   "1961"
+  ]
+ },
+ {
+  "nr": 189,
+  "id": 17519,
+  "correct": 2,
+  "answers": [
+   "1919",
+   "1933",
+   "1961",
+   "1990"
+  ]
+ },
+ {
+  "nr": 190,
+  "id": 17483,
+  "correct": 3,
+  "answers": [
+   "Dritter Deutscher Rundfunk",
+   "Die Deutsche Republik",
+   "Dritte Deutsche Republik",
+   "Deutsche Demokratische Republik"
+  ]
+ },
+ {
+  "nr": 191,
+  "id": 17482,
+  "correct": 1,
+  "answers": [
+   "1987",
+   "1989",
+   "1992",
+   "1995"
+  ]
+ },
+ {
+  "nr": 192,
+  "id": 17535,
+  "correct": 0,
+  "answers": [
+   "Brandenburg",
+   "Bayern",
+   "Saarland",
+   "Hessen"
+  ]
+ },
+ {
+  "nr": 193,
+  "id": 17448,
+  "correct": 2,
+  "answers": [
+   "ohne Bürgermeister.",
+   "ein eigener Staat.",
+   "durch eine Mauer geteilt.",
+   "nur mit dem Flugzeug erreichbar."
+  ]
+ },
+ {
+  "nr": 194,
+  "id": 17481,
+  "correct": 0,
+  "answers": [
+   "Einheit.",
+   "Nation.",
+   "Bundesländer.",
+   "Städte."
+  ]
+ },
+ {
+  "nr": 195,
+  "id": 17520,
+  "correct": 1,
+  "answers": [
+   "Hessen",
+   "Sachsen-Anhalt",
+   "Nordrhein-Westfalen",
+   "Saarland"
+  ]
+ },
+ {
+  "nr": 196,
+  "id": 17463,
+  "correct": 0,
+  "answers": [
+   "von einer Diktatur zur Demokratie.",
+   "von einer liberalen Marktwirtschaft zum Sozialismus.",
+   "von einer Monarchie zur Sozialdemokratie.",
+   "von einem religiösen Staat zu einem kommunistischen Staat."
+  ]
+ },
+ {
+  "nr": 197,
+  "id": 17534,
+  "correct": 0,
+  "answers": [
+   "Thüringen",
+   "Hessen",
+   "Bayern",
+   "Bremen"
+  ]
+ },
+ {
+  "nr": 198,
+  "id": 17517,
+  "correct": 2,
+  "answers": [
+   "Bayern",
+   "Niedersachsen",
+   "Sachsen",
+   "Baden-Württemberg"
+  ]
+ },
+ {
+  "nr": 199,
+  "id": 17550,
+  "correct": 1,
+  "answers": [
+   "das Parlament.",
+   "das Ministerium für Staatssicherheit.",
+   "eine regierende Partei.",
+   "das Ministerium für Volksbildung."
+  ]
+ },
+ {
+  "nr": 200,
+  "id": 17516,
+  "correct": 2,
+  "answers": [
+   "Hessen",
+   "Schleswig-Holstein",
+   "Mecklenburg-Vorpommern",
+   "Saarland"
+  ]
+ },
+ {
+  "nr": 201,
+  "id": 17500,
+  "correct": 1,
+  "answers": [
+   "Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg",
+   "Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen",
+   "Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen",
+   "Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg"
+  ]
+ },
+ {
+  "nr": 202,
+  "id": 17537,
+  "correct": 1,
+  "answers": [
+   "zu den Westmächten",
+   "zum Warschauer Pakt",
+   "zur NATO",
+   "zu den blockfreien Staaten"
+  ]
+ },
+ {
+  "nr": 203,
+  "id": 17551,
+  "correct": 1,
+  "answers": [
+   "Marktwirtschaft",
+   "Planwirtschaft",
+   "Angebot und Nachfrage",
+   "Kapitalismus"
+  ]
+ },
+ {
+  "nr": 204,
+  "id": 17552,
+  "correct": 1,
+  "answers": [
+   "Die Bundesrepublik hat die DDR besetzt.",
+   "Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.",
+   "Die westlichen Bundesländer sind der DDR beigetreten.",
+   "Die DDR hat die Bundesrepublik Deutschland besetzt."
+  ]
+ },
+ {
+  "nr": 205,
+  "id": 17498,
+  "correct": 0,
+  "answers": [
+   "zur Europäischen Union.",
+   "zum Warschauer Pakt.",
+   "zur OPEC.",
+   "zur Europäischen Verteidigungsgemeinschaft."
+  ]
+ },
+ {
+  "nr": 206,
+  "id": 17499,
+  "correct": 1,
+  "answers": [
+   "an berühmte deutsche Politikerinnen und Politiker",
+   "an die Opfer des Nationalsozialismus",
+   "an Verkehrstote",
+   "an bekannte jüdische Musiker"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 207,
+  "id": 17501,
+  "correct": 2,
+  "answers": [
+   "in der NATO",
+   "im Rheinbund",
+   "im Warschauer Pakt",
+   "im Europabündnis"
+  ]
+ },
+ {
+  "nr": 208,
+  "id": 17484,
+  "correct": 2,
+  "answers": [
+   "der Geheimdienst im \"Dritten Reich\"",
+   "eine berühmte deutsche Gedenkstätte",
+   "der Geheimdienst der DDR",
+   "ein deutscher Sportverein während des Zweiten Weltkrieges"
+  ]
+ },
+ {
+  "nr": 209,
+  "id": 17518,
+  "correct": 3,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 210,
+  "id": 17538,
+  "correct": 1,
+  "answers": [
+   "der feierliche Beitritt zum Warschauer Pakt",
+   "landesweite Streiks und ein Volksaufstand",
+   "der 1. SED-Parteitag",
+   "der erste Besuch Fidel Castros"
+  ]
+ },
+ {
+  "nr": 211,
+  "id": 17480,
+  "correct": 1,
+  "answers": [
+   "Helmut Kohl",
+   "Willy Brandt",
+   "Michail Gorbatschow",
+   "Ludwig Erhard"
+  ]
+ },
+ {
+  "nr": 212,
+  "id": 17278,
+  "correct": 2,
+  "answers": [
+   "Bundesstaat Deutschland",
+   "Bundesländer Deutschland",
+   "Bundesrepublik Deutschland",
+   "Bundesbezirk Deutschland"
+  ]
+ },
+ {
+  "nr": 213,
+  "id": 17553,
+  "correct": 2,
+  "answers": [
+   "70 Millionen",
+   "78 Millionen",
+   "84 Millionen",
+   "90 Millionen"
+  ]
+ },
+ {
+  "nr": 214,
+  "id": 17280,
+  "correct": 0,
+  "answers": [
+   "schwarz-rot-gold",
+   "rot-weiß-schwarz",
+   "schwarz-rot-grün",
+   "schwarz-gelb-rot"
+  ]
+ },
+ {
+  "nr": 215,
+  "id": 17281,
+  "correct": 1,
+  "answers": [
+   "Gerhard Schröder",
+   "Helmut Kohl",
+   "Konrad Adenauer",
+   "Helmut Schmidt"
+  ]
+ },
+ {
+  "nr": 216,
+  "id": 17255,
+  "correct": 0,
+  "answers": [
+   "der Bundesadler.",
+   "die Fahne der Stadt Berlin.",
+   "der Reichsadler.",
+   "die Reichskrone."
+  ]
+ },
+ {
+  "nr": 217,
+  "id": 17356,
+  "correct": 3,
+  "answers": [
+   "1919 bis 1927",
+   "1933 bis 1945",
+   "1945 bis 1961",
+   "1949 bis 1990"
+  ]
+ },
+ {
+  "nr": 218,
+  "id": 17277,
+  "correct": 1,
+  "answers": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ]
+ },
+ {
+  "nr": 219,
+  "id": 17279,
+  "correct": 3,
+  "answers": [
+   "1933",
+   "1949",
+   "1971",
+   "1990"
+  ]
+ },
+ {
+  "nr": 220,
+  "id": 17554,
+  "correct": 3,
+  "answers": [
+   "an das Ende des Zweiten Weltkrieges",
+   "an die Verabschiedung des Grundgesetzes",
+   "an die Wiedervereinigung Deutschlands",
+   "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)"
+  ]
+ },
+ {
+  "nr": 221,
+  "id": 17398,
+  "correct": 0,
+  "answers": [
+   "Deutsche können in viele Länder Europas ohne Passkontrolle reisen.",
+   "Alle Menschen können ohne Personenkontrolle in Deutschland einreisen.",
+   "Deutsche können ohne Passkontrolle in jedes Land reisen.",
+   "Deutsche können in jedem Land mit dem Euro bezahlen."
+  ]
+ },
+ {
+  "nr": 222,
+  "id": 17294,
+  "correct": 3,
+  "answers": [
+   "Ungarn",
+   "Portugal",
+   "Spanien",
+   "Schweiz"
+  ]
+ },
+ {
+  "nr": 223,
+  "id": 17397,
+  "correct": 2,
+  "answers": [
+   "Rumänien",
+   "Bulgarien",
+   "Polen",
+   "Griechenland"
+  ]
+ },
+ {
+  "nr": 224,
+  "id": 17313,
+  "correct": 1,
+  "answers": [
+   "Europäische Unternehmen",
+   "Europäische Union",
+   "Einheitliche Union",
+   "Euro Union"
+  ]
+ },
+ {
+  "nr": 225,
+  "id": 17399,
+  "correct": 3,
+  "answers": [
+   "Tschechien",
+   "Norwegen",
+   "Spanien",
+   "Österreich"
+  ]
+ },
+ {
+  "nr": 226,
+  "id": 17315,
+  "correct": 1,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 227,
+  "id": 17293,
+  "correct": 1,
+  "answers": [
+   "Finnland",
+   "Dänemark",
+   "Norwegen",
+   "Schweden"
+  ]
+ },
+ {
+  "nr": 228,
+  "id": 17464,
+  "correct": 2,
+  "answers": [
+   "NATO-Osterweiterung",
+   "EU-Osterweiterung",
+   "Deutsche Wiedervereinigung",
+   "Europäische Gemeinschaft"
+  ]
+ },
+ {
+  "nr": 229,
+  "id": 17396,
+  "correct": 3,
+  "answers": [
+   "Spanien",
+   "Bulgarien",
+   "Norwegen",
+   "Luxemburg"
+  ]
+ },
+ {
+  "nr": 230,
+  "id": 17316,
+  "correct": 0,
+  "answers": [
+   "5 Jahre.",
+   "6 Jahre.",
+   "7 Jahre.",
+   "8 Jahre."
+  ]
+ },
+ {
+  "nr": 231,
+  "id": 17295,
+  "correct": 3,
+  "answers": [
+   "Damit sind amerikanische Einwanderer in Europa gemeint.",
+   "Der Begriff meint den Einwanderungsstopp nach Europa.",
+   "Damit sind europäische Auswanderer in den USA gemeint.",
+   "Der Begriff meint den Zusammenschluss europäischer Staaten zur EU."
+  ]
+ },
+ {
+  "nr": 232,
+  "id": 17337,
+  "correct": 2,
+  "answers": [
+   "die Europäische Kommission",
+   "die Länder, die in die EU eintreten dürfen",
+   "die Abgeordneten des Europäischen Parlaments",
+   "die europäische Verfassung"
+  ]
+ },
+ {
+  "nr": 233,
+  "id": 17338,
+  "correct": 0,
+  "answers": [
+   "Tschechien",
+   "Bulgarien",
+   "Griechenland",
+   "Portugal"
+  ]
+ },
+ {
+  "nr": 234,
+  "id": 17311,
+  "correct": 3,
+  "answers": [
+   "London",
+   "Paris",
+   "Berlin",
+   "Straßburg"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 235,
+  "id": 17314,
+  "correct": 2,
+  "answers": [
+   "Freundschaft zwischen England und Deutschland",
+   "Reisefreiheit in alle Länder der EU",
+   "Frieden und Sicherheit in den Ländern der EU",
+   "einheitliche Feiertage in den Ländern der EU"
+  ]
+ },
+ {
+  "nr": 236,
+  "id": 17312,
+  "correct": 3,
+  "answers": [
+   "21",
+   "23",
+   "25",
+   "27"
+  ]
+ },
+ {
+  "nr": 237,
+  "id": 17335,
+  "correct": 1,
+  "answers": [
+   "Beitritt Deutschlands zur NATO",
+   "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)",
+   "Verpflichtung Deutschlands zu Reparationsleistungen",
+   "Festlegung der Oder-Neiße-Linie als Ostgrenze"
+  ]
+ },
+ {
+  "nr": 238,
+  "id": 17291,
+  "correct": 1,
+  "answers": [
+   "Paris, London und Den Haag",
+   "Straßburg, Luxemburg und Brüssel",
+   "Rom, Bern und Wien",
+   "Bonn, Zürich und Mailand"
+  ]
+ },
+ {
+  "nr": 239,
+  "id": 17336,
+  "correct": 1,
+  "answers": [
+   "durch die \"Hamburger Verträge\"",
+   "durch die \"Römischen Verträge\"",
+   "durch die \"Pariser Verträge\"",
+   "durch die \"Londoner Verträge\""
+  ]
+ },
+ {
+  "nr": 240,
+  "id": 17292,
+  "correct": 2,
+  "answers": [
+   "1995",
+   "1998",
+   "2002",
+   "2005"
+  ]
+ },
+ {
+  "nr": 241,
+  "id": 17523,
+  "correct": 1,
+  "answers": [
+   "Sie muss an ihre Krankenkasse schreiben.",
+   "Sie muss einen Antrag bei der Elterngeldstelle stellen.",
+   "Sie muss nichts tun, denn sie bekommt automatisch Elterngeld.",
+   "Sie muss das Arbeitsamt um Erlaubnis bitten."
+  ]
+ },
+ {
+  "nr": 242,
+  "id": 17540,
+  "correct": 2,
+  "answers": [
+   "der Staat",
+   "die Bundesländer",
+   "die Eltern/die Erziehungsberechtigten",
+   "die Schulen"
+  ]
+ },
+ {
+  "nr": 243,
+  "id": 17660,
+  "correct": 0,
+  "answers": [
+   "Sie müssen die Demonstration anmelden.",
+   "Sie müssen nichts tun. Man darf in Deutschland jederzeit überall demonstrieren.",
+   "Sie können gar nichts tun, denn Demonstrationen sind in Deutschland grundsätzlich verboten.",
+   "Maik und Sybille müssen einen neuen Verein gründen, weil nur Vereine demonstrieren dürfen."
+  ]
+ },
+ {
+  "nr": 244,
+  "id": 17487,
+  "correct": 0,
+  "answers": [
+   "das Abitur",
+   "ein Diplom",
+   "die Prokura",
+   "eine Gesellenprüfung"
+  ]
+ },
+ {
+  "nr": 245,
+  "id": 17521,
+  "correct": 3,
+  "answers": [
+   "Hans (20 Jahre) und Marie (19 Jahre)",
+   "Tom (20 Jahre) und Klaus (45 Jahre)",
+   "Sofie (35 Jahre) und Lisa (40 Jahre)",
+   "Anne (13 Jahre) und Tim (25 Jahre)"
+  ]
+ },
+ {
+  "nr": 246,
+  "id": 17202,
+  "correct": 1,
+  "answers": [
+   "16",
+   "18",
+   "19",
+   "21"
+  ]
+ },
+ {
+  "nr": 247,
+  "id": 17466,
+  "correct": 1,
+  "answers": [
+   "Elternzeit",
+   "Mutterschutz",
+   "Geburtsvorbereitung",
+   "Wochenbett"
+  ]
+ },
+ {
+  "nr": 248,
+  "id": 17488,
+  "correct": 1,
+  "answers": [
+   "des Staates.",
+   "der Eltern.",
+   "der Großeltern.",
+   "der Schulen."
+  ]
+ },
+ {
+  "nr": 249,
+  "id": 17503,
+  "correct": 1,
+  "answers": [
+   "der Staat",
+   "die Eltern",
+   "die Verwandten",
+   "die Schulen"
+  ]
+ },
+ {
+  "nr": 250,
+  "id": 17502,
+  "correct": 1,
+  "answers": [
+   "katholisch ist.",
+   "gut ausgebildet ist.",
+   "eine Frau ist.",
+   "Mitglied einer Partei ist."
+  ]
+ },
+ {
+  "nr": 251,
+  "id": 17577,
+  "correct": 3,
+  "answers": [
+   "geht das niemanden etwas an.",
+   "geht das nur die Familie etwas an.",
+   "kann man dafür nicht bestraft werden.",
+   "kann man dafür bestraft werden."
+  ]
+ },
+ {
+  "nr": 252,
+  "id": 17569,
+  "correct": 0,
+  "answers": [
+   "darf man zur gleichen Zeit nur mit einem Partner / einer Partnerin verheiratet sein.",
+   "kann man mehrere Ehepartner / Ehepartnerinnen gleichzeitig haben.",
+   "darf man nicht wieder heiraten, wenn man einmal verheiratet war.",
+   "darf eine Frau nicht wieder heiraten, wenn ihr Mann gestorben ist."
+  ]
+ },
+ {
+  "nr": 253,
+  "id": 17570,
+  "correct": 0,
+  "answers": [
+   "beim Einwohnermeldeamt",
+   "beim Standesamt",
+   "beim Ordnungsamt",
+   "beim Gewerbeamt"
+  ]
+ },
+ {
+  "nr": 254,
+  "id": 17580,
+  "correct": 3,
+  "answers": [
+   "Der Scheidungsprozess dauert ein Jahr",
+   "Die Ehegatten sind ein Jahr verheiratet, dann ist die Scheidung möglich",
+   "Das Besuchsrecht für die Kinder gilt ein Jahr",
+   "Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich"
+  ]
+ },
+ {
+  "nr": 255,
+  "id": 17524,
+  "correct": 2,
+  "answers": [
+   "Ordnungsamt.",
+   "Schulamt.",
+   "Jugendamt.",
+   "Gesundheitsamt."
+  ]
+ },
+ {
+  "nr": 256,
+  "id": 17581,
+  "correct": 3,
+  "answers": [
+   "eine Erlaubnis der Polizei",
+   "eine Genehmigung einer Partei",
+   "eine Genehmigung des Einwohnermeldeamts",
+   "eine Gaststättenerlaubnis von der zuständigen Behörde"
+  ]
+ },
+ {
+  "nr": 257,
+  "id": 17468,
+  "correct": 1,
+  "answers": [
+   "einer Hochschule.",
+   "einem Abendgymnasium.",
+   "einer Hauptschule.",
+   "einer Privatuniversität."
+  ]
+ },
+ {
+  "nr": 258,
+  "id": 17574,
+  "correct": 1,
+  "answers": [
+   "Es entscheidet, welche Schule das Kind besucht.",
+   "Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.",
+   "Es bezahlt das Kindergeld an die Eltern.",
+   "Es kontrolliert, ob das Kind einen Kindergarten besucht."
+  ]
+ },
+ {
+  "nr": 259,
+  "id": 17504,
+  "correct": 1,
+  "answers": [
+   "Rentenberechnung.",
+   "Lehrstellensuche.",
+   "Steuererklärung.",
+   "Krankenversicherung."
+  ]
+ },
+ {
+  "nr": 260,
+  "id": 17485,
+  "correct": 3,
+  "answers": [
+   "Recht auf unbegrenzte Freizeit.",
+   "Wahlfreiheit für alle Fächer.",
+   "Anspruch auf Schulgeld.",
+   "Anwesenheitspflicht."
+  ]
+ },
+ {
+  "nr": 261,
+  "id": 17467,
+  "correct": 1,
+  "answers": [
+   "einer Hochschule",
+   "einem Abendgymnasium",
+   "einer Hauptschule",
+   "einer Privatuniversität"
+  ]
+ },
+ {
+  "nr": 262,
+  "id": 17203,
+  "correct": 0,
+  "answers": [
+   "Niemand darf z.B. wegen einer Behinderung benachteiligt werden.",
+   "Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.",
+   "Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.",
+   "Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden."
+  ]
+ },
+ {
+  "nr": 263,
+  "id": 17576,
+  "correct": 0,
+  "answers": [
+   "werden bestraft.",
+   "werden wie Erwachsene behandelt.",
+   "teilen die Strafe mit ihren Eltern.",
+   "werden nicht bestraft."
+  ]
+ },
+ {
+  "nr": 264,
+  "id": 17530,
+  "correct": 0,
+  "answers": [
+   "am Rosenmontag",
+   "am Maifeiertag",
+   "beim Oktoberfest",
+   "an Pfingsten"
+  ]
+ },
+ {
+  "nr": 265,
+  "id": 17572,
+  "correct": 3,
+  "answers": [
+   "zum Einwohnermeldeamt",
+   "zum Ordnungsamt",
+   "zur Agentur für Arbeit",
+   "zum Standesamt"
+  ]
+ },
+ {
+  "nr": 266,
+  "id": 17564,
+  "correct": 3,
+  "answers": [
+   "wenn die Sonne untergeht",
+   "wenn die Nachbarn schlafen gehen",
+   "um 0 Uhr, Mitternacht",
+   "um 22 Uhr"
+  ]
+ },
+ {
+  "nr": 267,
+  "id": 17575,
+  "correct": 0,
+  "answers": [
+   "Sie müssen die Entscheidung der volljährigen Tochter respektieren.",
+   "Sie haben das Recht, die Tochter in die elterliche Wohnung zurückzuholen.",
+   "Sie können zur Polizei gehen und die Tochter anzeigen.",
+   "Sie suchen einen anderen Mann für die Tochter."
+  ]
+ },
+ {
+  "nr": 268,
+  "id": 17539,
+  "correct": 3,
+  "answers": [
+   "Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.",
+   "Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.",
+   "Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.",
+   "Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl."
+  ]
+ },
+ {
+  "nr": 269,
+  "id": 17522,
+  "correct": 2,
+  "answers": [
+   "monatliches Taschengeld.",
+   "einen Platz in einem Sportverein.",
+   "einen Kindergartenplatz.",
+   "einen Ferienpass."
+  ]
+ },
+ {
+  "nr": 270,
+  "id": 17505,
+  "correct": 2,
+  "answers": [
+   "für den Religionsunterricht.",
+   "nur für Jugendliche.",
+   "zur Weiterbildung.",
+   "nur für Rentner und Rentnerinnen."
+  ]
+ },
+ {
+  "nr": 271,
+  "id": 17532,
+  "correct": 1,
+  "answers": [
+   "bunte Eier verstecken",
+   "einen Tannenbaum schmücken",
+   "sich mit Masken und Kostümen verkleiden",
+   "Kürbisse vor die Tür stellen"
+  ]
+ },
+ {
+  "nr": 272,
+  "id": 17582,
+  "correct": 3,
+  "answers": [
+   "Mann und Frau sind geschieden und leben mit neuen Partnern zusammen.",
+   "Zwei Frauen leben zusammen.",
+   "Ein alleinerziehender Vater lebt mit seinen zwei Kindern zusammen.",
+   "Ein Mann ist mit zwei Frauen zur selben Zeit verheiratet."
+  ]
+ },
+ {
+  "nr": 273,
+  "id": 17583,
+  "correct": 3,
+  "answers": [
+   "zum Arzt / zur Ärztin.",
+   "zum Gesundheitsamt.",
+   "zum Einwohnermeldeamt.",
+   "zum Jugendamt."
+  ]
+ },
+ {
+  "nr": 274,
+  "id": 17557,
+  "correct": 1,
+  "answers": [
+   "das Schweigerecht",
+   "das Briefgeheimnis",
+   "die Schweigepflicht",
+   "die Meinungsfreiheit"
+  ]
+ },
+ {
+  "nr": 275,
+  "id": 17571,
+  "correct": 3,
+  "answers": [
+   "die Einwilligung der Eltern",
+   "ein Attest eines Arztes / einer Ärztin",
+   "die Einwilligung der Kinder",
+   "die Unterstützung eines Anwalts / einer Anwältin"
+  ]
+ },
+ {
+  "nr": 276,
+  "id": 17541,
+  "correct": 3,
+  "answers": [
+   "Ich kann nichts tun.",
+   "Ich muss mir diese Behandlung gefallen lassen.",
+   "Ich drohe der Person.",
+   "Ich kann mich beim Behördenleiter / bei der Behördenleiterin beschweren."
+  ]
+ },
+ {
+  "nr": 277,
+  "id": 17567,
+  "correct": 3,
+  "answers": [
+   "kein Englisch spricht.",
+   "zu hohe Gehaltsvorstellungen hat.",
+   "keine Erfahrungen in diesem Beruf hat.",
+   "Mutter ist."
+  ]
+ },
+ {
+  "nr": 278,
+  "id": 17256,
+  "correct": 0,
+  "answers": [
+   "im Rollstuhl sitzt.",
+   "keine Erfahrung hat.",
+   "zu hohe Gehaltsvorstellungen hat.",
+   "kein Englisch spricht."
+  ]
+ },
+ {
+  "nr": 279,
+  "id": 17282,
+  "correct": 2,
+  "answers": [
+   "Regeln für die Benutzung öffentlicher Verkehrsmittel.",
+   "alle Mieter und Mieterinnen im Haus.",
+   "Regeln, an die sich alle Bewohner und Bewohnerinnen halten müssen.",
+   "die Adresse des nächsten Ordnungsamtes."
+  ]
+ },
+ {
+  "nr": 280,
+  "id": 17555,
+  "correct": 2,
+  "answers": [
+   "nichts machen.",
+   "den Bescheid wegwerfen.",
+   "Einspruch einlegen.",
+   "warten, bis ein anderer Bescheid kommt."
+  ]
+ },
+ {
+  "nr": 281,
+  "id": 17578,
+  "correct": 1,
+  "answers": [
+   "Meinungsfreiheit.",
+   "Gleichbehandlung.",
+   "Versammlungsfreiheit.",
+   "Freizügigkeit."
+  ]
+ },
+ {
+  "nr": 282,
+  "id": 17619,
+  "correct": 1,
+  "answers": [
+   "Vereinstrainer / Vereinstrainerin",
+   "Wahlhelfer / Wahlhelferin",
+   "Bibliotheksaufsicht",
+   "Lehrer / Lehrerin"
+  ]
+ },
+ {
+  "nr": 283,
+  "id": 17568,
+  "correct": 1,
+  "answers": [
+   "Ich lasse die Rechnung liegen.",
+   "Ich lege Widerspruch bei der Behörde ein.",
+   "Ich schicke die Rechnung an die Behörde zurück.",
+   "Ich gehe mit der Rechnung zum Finanzamt."
+  ]
+ },
+ {
+  "nr": 284,
+  "id": 17486,
+  "correct": 1,
+  "answers": [
+   "Es ist egal, was man lernt.",
+   "Erwachsene müssen auch nach der Ausbildung immer weiter lernen.",
+   "Kinder lernen in der Schule alles, was im Beruf wichtig ist. Nach der Schule muss man nicht weiter lernen.",
+   "Alle müssen früher aufhören zu arbeiten, weil sich alles ändert."
+  ]
+ },
+ {
+  "nr": 285,
+  "id": 17661,
+  "correct": 3,
+  "answers": [
+   "Lohnsteuer",
+   "Beiträge zur Arbeitslosenversicherung",
+   "Beiträge zur Renten- und Krankenversicherung",
+   "Umsatzsteuer"
+  ]
+ },
+ {
+  "nr": 286,
+  "id": 17573,
+  "correct": 0,
+  "answers": [
+   "der Betriebsrat",
+   "der Betriebsprüfer / die Betriebsprüferin",
+   "die Betriebsgruppe",
+   "das Betriebsmanagement"
+  ]
+ },
+ {
+  "nr": 287,
+  "id": 17565,
+  "correct": 2,
+  "answers": [
+   "die Gehaltszahlungen",
+   "die Arbeitszeit",
+   "die Kündigungsfrist",
+   "die Versícherungspflicht"
+  ]
+ },
+ {
+  "nr": 288,
+  "id": 17566,
+  "correct": 1,
+  "answers": [
+   "aus der Mitgliedschaft in der Europäischen Union (EU)",
+   "aus den nationalsozialistischen Verbrechen gegen Juden",
+   "aus dem Grundgesetz der Bundesrepublik Deutschland",
+   "aus der christlichen Tradition"
+  ],
+  "noImg": true
+ },
+ {
+  "nr": 289,
+  "id": 17579,
+  "correct": 2,
+  "answers": [
+   "seine Deutschkenntnisse zu gering sind.",
+   "er zu hohe Gehaltsvorstellungen hat.",
+   "er eine dunkle Haut hat.",
+   "er keine Erfahrungen im Beruf hat."
+  ]
+ },
+ {
+  "nr": 290,
+  "id": 17556,
+  "correct": 1,
+  "answers": [
+   "eine Anzeige schreiben",
+   "den Fernseher reklamieren",
+   "das Gerät ungefragt austauschen",
+   "die Garantie verlängern"
+  ]
+ },
+ {
+  "nr": 291,
+  "id": 17546,
+  "correct": 0,
+  "answers": [
+   "es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",
+   "das für die Statistik in Deutschland wichtig ist.",
+   "man mehr Steuern zahlen muss, wenn man nicht zu einer Kirche gehört.",
+   "die Kirche für die Steuererklärung verantwortlich ist."
+  ]
+ },
+ {
+  "nr": 292,
+  "id": 17283,
+  "correct": 2,
+  "answers": [
+   "Es dürfen keine Moscheen gebaut werden.",
+   "Alle Menschen glauben an Gott.",
+   "Jeder kann glauben, was er möchte.",
+   "Der Staat entscheidet, an welchen Gott die Menschen glauben."
+  ]
+ },
+ {
+  "nr": 293,
+  "id": 17529,
+  "correct": 2,
+  "answers": [
+   "Kürbisse vor die Tür stellen",
+   "einen Tannenbaum schmücken",
+   "Eier bemalen",
+   "Raketen in die Luft schießen"
+  ]
+ },
+ {
+  "nr": 294,
+  "id": 17515,
+  "correct": 0,
+  "answers": [
+   "christlicher Feiertag.",
+   "deutscher Gedenktag.",
+   "internationaler Trauertag.",
+   "bayerischer Brauch."
+  ]
+ },
+ {
+  "nr": 295,
+  "id": 17533,
+  "correct": 1,
+  "answers": [
+   "der Hinduismus",
+   "das Christentum",
+   "der Buddhismus",
+   "der Islam"
+  ]
+ },
+ {
+  "nr": 296,
+  "id": 17531,
+  "correct": 2,
+  "answers": [
+   "den Buß- und Bettag.",
+   "das Erntedankfest.",
+   "die Adventszeit.",
+   "Allerheiligen."
+  ]
+ },
+ {
+  "nr": 297,
+  "id": 17548,
+  "correct": 3,
+  "answers": [
+   "Italien",
+   "Polen",
+   "Marokko",
+   "Türkei"
+  ]
+ },
+ {
+  "nr": 298,
+  "id": 17547,
+  "correct": 0,
+  "answers": [
+   "Vietnam, Polen, Mosambik.",
+   "Frankreich, Rumänien, Somalia.",
+   "Chile, Ungarn, Simbabwe.",
+   "Nordkorea, Mexiko, Ägypten."
+  ]
+ },
+ {
+  "nr": 299,
+  "id": 17289,
+  "correct": 1,
+  "answers": [
+   "Schwarzarbeiter / Schwarzarbeiterinnen.",
+   "Gastarbeiter / Gastarbeiterinnen.",
+   "Zeitarbeiter /Zeitarbeiterinnen.",
+   "Schichtarbeiter / Schichtarbeiterinnen."
+  ]
+ },
+ {
+  "nr": 300,
+  "id": 17288,
+  "correct": 0,
+  "answers": [
+   "Italien",
+   "Spanien",
+   "Portugal",
+   "Türkei"
+  ]
+ },
+ {
+  "nr": 301,
+  "id": 17349,
+  "correct": 1,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 302,
+  "id": 17327,
+  "correct": 1,
+  "answers": [
+   "Ammerland",
+   "Rhein-Sieg-Kreis",
+   "Nordfriesland",
+   "Vogtlandkreis"
+  ]
+ },
+ {
+  "nr": 303,
+  "id": 17477,
+  "correct": 2,
+  "answers": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ]
+ },
+ {
+  "nr": 304,
+  "id": 17509,
+  "correct": 1,
+  "answers": [
+   "14",
+   "16",
+   "18",
+   "20"
+  ]
+ },
+ {
+  "nr": 305,
+  "id": 17285,
+  "correct": 1,
+  "answers": [
+   "rot-weiß",
+   "grün-weiß-rot",
+   "schwarz-gold",
+   "blau-weiß-rot"
+  ]
+ },
+ {
+  "nr": 306,
+  "id": 17300,
+  "correct": 3,
+  "answers": [
+   "bei den Kirchen",
+   "beim Ordnungsamt der Gemeinde",
+   "bei der Verbraucherzentrale",
+   "bei der Landeszentrale für politische Bildung"
+  ]
+ },
+ {
+  "nr": 307,
+  "id": 17456,
+  "correct": 2,
+  "answers": [
+   "Köln.",
+   "Bonn.",
+   "Düsseldorf.",
+   "Dortmund."
+  ]
+ },
+ {
+  "nr": 308,
+  "id": 17341,
+  "correct": 2,
+  "answers": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "nr": 309,
+  "id": 17403,
+  "correct": 3,
+  "answers": [
+   "Erster Minister/ Erste Ministerin",
+   "Premierminister/ Premierministerin",
+   "Bürgermeister/ Bürgermeisterin",
+   "Ministerpräsident/ Ministerpräsidentin"
+  ]
+ },
+ {
+  "nr": 310,
+  "id": 17246,
+  "correct": 1,
+  "answers": [
+   "Justizminister/ Justizministerin",
+   "Außenminister/ Außenministerin",
+   "Finanzminister/ Finanzministerin",
+   "Innenminister/ Innenministerin"
+  ]
+ }
+]
