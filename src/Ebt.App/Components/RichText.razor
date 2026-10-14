@@ -1,0 +1,29 @@
+@* Renders text segments pre-parsed by the pipeline: underlined parts and tappable glossary terms. No parsing happens here. *@
+@inject Catalog Catalog
+@inject Dialogs Dialogs
+
+@foreach (var segment in Text)
+{
+    if (segment.Underline)
+    {
+        <u>@Content(segment)</u>
+    }
+    else
+    {
+        @Content(segment)
+    }
+}
+
+@code {
+    [Parameter, EditorRequired] public IReadOnlyList<Segment> Text { get; set; } = [];
+
+    /// <summary>Glossary terms open their explanation (off during the exam).</summary>
+    [Parameter] public bool Terms { get; set; }
+
+    public static string Plain(IReadOnlyList<Segment> text) => string.Concat(text.Select(s => s.Text));
+
+    // stopPropagation: a term inside an answer button explains the term instead of choosing the answer.
+    private RenderFragment Content(Segment segment) => Terms && segment.Term is int term
+        ? @<span class="term" role="button" tabindex="0" @onclick="() => Dialogs.ShowTerm(Catalog.Terms[term])" @onclick:stopPropagation>@segment.Text</span>
+        : @<text>@segment.Text</text>;
+}

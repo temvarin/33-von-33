@@ -1,0 +1,52 @@
+@page "/"
+@inject Catalog Catalog
+@inject AppState State
+@inject TimeProvider Clock
+@inject Random Random
+@inject NavigationManager Nav
+
+<TopBar Title="Einbürgerungstest" Kicker="@($"Nordrhein-Westfalen · {total} Fragen")" />
+
+<div class="card">
+    <div class="row"><span class="display big-num">@mastered</span><span class="muted">von @total gelernt</span></div>
+    <ProgressBar Value="mastered" Max="total" />
+    <p class="hint">Gelernt heißt: @(Progress.MasteredBox)× hintereinander richtig.</p>
+</div>
+@* A practice run in progress continues directly; its back button leads to the practice modes. *@
+<button class="btn primary left hero" @onclick='() => Nav.NavigateTo(resume ? "practice/run" : "practice")'>
+    <span><span class="display">Üben</span><small>@(resume ? $"Weiter bei Frage {run.Position + 1}" : $"Alle {total} Fragen")</small></span>
+    <Icon Name="arrow-right" />
+</button>
+<div class="tiles">
+    <button class="tile" @onclick='() => Nav.NavigateTo("review")'>
+        <Icon Name="repeat" />Fehler<small>@(mistakes > 0 ? $"{mistakes} offen" : "Keine offen")</small>
+    </button>
+    <button class="tile" @onclick='() => Nav.NavigateTo("exam")'>
+        <Icon Name="clipboard-check" />Prüfung<small>@(examLeft is { } left ? $"Läuft · noch {(int)Math.Ceiling(left.TotalMinutes)} Min." : "33 Fragen · 60 Min.")</small>
+    </button>
+    <button class="tile" @onclick='() => Nav.NavigateTo("glossary")'>
+        <Icon Name="language" /><span lang="ru">Словарь</span><small>@Catalog.Terms.Count Begriffe</small>
+    </button>
+    <button class="tile" @onclick='() => Nav.NavigateTo("stats")'>
+        <Icon Name="chart-bar" />Fortschritt<small>Statistik</small>
+    </button>
+</div>
+
+@code {
+    private int total, mastered, mistakes;
+    private PracticeRun run = null!;
+    private bool resume;
+    private TimeSpan? examLeft;
+
+    protected override void OnInitialized()
+    {
+        var progress = State.Progress;
+        total = Catalog.Questions.Count;
+        mastered = progress.CountMastered(Catalog.Questions);
+        mistakes = progress.MistakeQueue(Catalog.Questions, Random).Count;
+        run = progress.Practice;
+        resume = run.Order.Count > 0 && !run.IsFinished;
+        var now = Clock.GetUtcNow();
+        examLeft = progress.Exam is { } exam && !exam.IsOver(now) ? exam.Remaining(now) : null;
+    }
+}

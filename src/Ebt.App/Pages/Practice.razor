@@ -1,0 +1,48 @@
+@page "/practice/run"
+@inject Catalog Catalog
+@inject AppState State
+@inject NavigationManager Nav
+
+@if (run.IsFinished)
+{
+    <TopBar Title="Üben" Back="practice" />
+    <div class="card center">
+        <p class="headline">Durchgang geschafft</p>
+        <p class="muted">@State.Progress.CountMastered(Catalog.Questions) von @Catalog.Questions.Count Fragen gelernt.</p>
+    </div>
+    <button class="btn primary" @onclick='() => Nav.NavigateTo("practice")'>Neuen Durchgang starten</button>
+    <button class="btn" @onclick='() => Nav.NavigateTo("")'>Zur Startseite</button>
+}
+else
+{
+    var question = Catalog[run.Current];
+    var answered = chosen is not null;
+    <TopBar Title="@run.Mode.Label()" Back="practice" />
+    <QuestionCard @key="run.Position" Question="question" Label="@($"Frage {run.Position + 1} von {run.Order.Count}")"
+                  Chosen="chosen" Reveal="answered" Locked="answered" OnAnswer="i => Answer(question, i)" />
+    <div class="nav">
+        <button class="btn" disabled="@(run.Position == 0)" @onclick="() => Move(run.Previous)"><Icon Name="arrow-left" />Zurück</button>
+        <button class="btn @(answered ? "next" : "")" @onclick="() => Move(run.Next)">@(answered ? "Weiter" : "Überspringen")<Icon Name="arrow-right" /></button>
+    </div>
+}
+
+@code {
+    private PracticeRun run = null!;
+    private int? chosen;
+
+    protected override void OnInitialized() => run = State.Progress.Practice;
+
+    private void Answer(Question question, int answer)
+    {
+        State.Progress.Record(question.Number, answer == question.Correct);
+        State.Save();
+        chosen = answer;
+    }
+
+    private void Move(Action step)
+    {
+        step();
+        State.Save();
+        chosen = null;
+    }
+}

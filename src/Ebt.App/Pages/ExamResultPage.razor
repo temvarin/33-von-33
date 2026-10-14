@@ -1,0 +1,53 @@
+@page "/exam/result/{Index:int}"
+@inject Catalog Catalog
+@inject AppState State
+@inject TimeProvider Clock
+@inject Random Random
+@inject NavigationManager Nav
+
+<TopBar Title="Ergebnis" Back="" />
+
+@if (State.Progress.Exams.ElementAtOrDefault(Index) is not { } result)
+{
+    <div class="card">Dieses Ergebnis gibt es nicht mehr.</div>
+}
+else
+{
+    var wrong = Enumerable.Range(0, result.Total).Where(i => result.Wrong.Contains(result.Questions[i])).ToList(); // positions
+    <div class="card center">
+        <div class="score @(result.Passed ? "pass" : "fail")">@result.Score / @result.Total</div>
+        <p><b>@(result.Passed ? "Bestanden" : "Nicht bestanden")</b></p>
+        <p class="hint">Zum Bestehen: mindestens @Exam.PassMark richtige Antworten</p>
+    </div>
+    <div class="card">
+        <div class="grid">
+            @for (var i = 0; i < result.Total; i++)
+            {
+                <span class="@(wrong.Contains(i) ? "bad" : "ok")">@(i + 1)</span>
+            }
+        </div>
+    </div>
+    @if (wrong.Count > 0)
+    {
+        <p><b>Falsch beantwortet (@wrong.Count)</b></p>
+    }
+    @foreach (var i in wrong)
+    {
+        <QuestionCard @key="i" Question="Catalog[result.Questions[i]]" Chosen="result.Answers[i]" Reveal Locked ScrollToTop="false"
+                      Label="@($"Frage {i + 1}{(result.Answers[i] is null ? " · nicht beantwortet" : "")}")" />
+    }
+}
+<button class="btn primary" @onclick="NewExam">Neue Prüfung</button>
+<button class="btn" @onclick='() => Nav.NavigateTo("")'>Zur Startseite</button>
+
+@code {
+    /// <summary>Which stored result, 0 = latest.</summary>
+    [Parameter] public int Index { get; set; }
+
+    private void NewExam()
+    {
+        State.Progress.StartExam(Catalog.Questions, Clock.GetUtcNow(), Random);
+        State.Save();
+        Nav.NavigateTo("exam");
+    }
+}

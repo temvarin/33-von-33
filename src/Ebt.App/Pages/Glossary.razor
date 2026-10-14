@@ -1,0 +1,42 @@
+@page "/glossary"
+@inject Catalog Catalog
+
+<TopBar Title="Begriffe · Словарь" Back="" />
+
+<input class="search" type="search" placeholder="Suchen · Поиск" aria-label="Begriff suchen" autocomplete="off"
+       @bind="query" @bind:event="oninput">
+@if (Shown().Any())
+{
+    <div class="card">
+        <ul class="plain glossary">
+            @foreach (var (term, _) in Shown())
+            {
+                <li>
+                    <div class="term-de">@term.De</div>
+                    <div class="term-ru" lang="ru">@term.Ru</div>
+                    <div class="muted" lang="ru">@term.Note</div>
+                </li>
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <p class="muted center">Nichts gefunden · Ничего не найдено</p>
+}
+
+@code {
+    private (Term Term, string SearchText)[] terms = [];
+    private string query = "";
+
+    protected override void OnInitialized() =>
+        terms = [.. Catalog.Terms
+            .OrderBy(t => t.SortKey, StringComparer.Ordinal)
+            .Select(t => (t, $"{t.De} {t.Ru}".ToLowerInvariant()))];
+
+    private IEnumerable<(Term Term, string SearchText)> Shown()
+    {
+        var q = query.Trim().ToLowerInvariant();
+        return q.Length == 0 ? terms : terms.Where(t => t.SearchText.Contains(q, StringComparison.Ordinal));
+    }
+}

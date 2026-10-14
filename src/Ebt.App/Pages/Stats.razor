@@ -1,0 +1,76 @@
+@page "/stats"
+@inject Catalog Catalog
+@inject AppState State
+@inject Dialogs Dialogs
+@inject NavigationManager Nav
+
+<TopBar Title="Fortschritt" Back="" />
+
+<div class="card stat-tiles">
+    <div><b>@(total - counts.New)</b><span class="muted">gesehen</span></div>
+    <div><b>@mastered</b><span class="muted">gelernt</span></div>
+    <div><b>@(total - mastered)</b><span class="muted">offen</span></div>
+</div>
+<div class="card bars">
+    @foreach (var (label, n) in Rows())
+    {
+        <div class="bar-row">
+            <span>@label</span>
+            <ProgressBar Value="n" Max="total" />
+            <span>@n</span>
+        </div>
+    }
+</div>
+<div class="card">
+    <b>Letzte Prüfungen</b>
+    @if (State.Progress.Exams.Count == 0)
+    {
+        <p class="muted">Noch keine Prüfung gemacht.</p>
+    }
+    else
+    {
+        <ul class="plain">
+            @foreach (var (result, i) in State.Progress.Exams.Take(10).Select((r, i) => (r, i)))
+            {
+                <li>
+                    <a href="exam/result/@i" class="row">
+                        <span>@result.Date.ToLocalTime().ToString("dd.MM.yyyy, HH:mm", CultureInfo.InvariantCulture)</span>
+                        <span class="end @(result.Passed ? "pass" : "fail")"><b>@result.Score / @result.Total</b> ›</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+</div>
+<button class="btn danger" @onclick="Reset">Fortschritt zurücksetzen</button>
+
+@code {
+    private int total, mastered;
+    private BoxCounts counts = null!;
+
+    protected override void OnInitialized()
+    {
+        total = Catalog.Questions.Count;
+        counts = State.Progress.CountBoxes(Catalog.Questions);
+        mastered = counts.InBox[Progress.MasteredBox];
+    }
+
+    private IEnumerable<(string Label, int Count)> Rows() =>
+    [
+        ("Neu", counts.New),
+        ("Zuletzt falsch", counts.InBox[0]),
+        ("1× richtig", counts.InBox[1]),
+        ("2× richtig", counts.InBox[2]),
+        ("Gelernt", counts.InBox[3]),
+    ];
+
+    private async Task Reset()
+    {
+        if (await Dialogs.Confirm("Wirklich den gesamten Fortschritt und alle Prüfungsergebnisse löschen?",
+                ok: "Löschen", cancel: "Abbrechen", danger: true))
+        {
+            State.Reset();
+            Nav.NavigateTo("");
+        }
+    }
+}

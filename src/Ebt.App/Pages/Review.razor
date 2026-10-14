@@ -1,0 +1,51 @@
+@page "/review"
+@inject Catalog Catalog
+@inject AppState State
+@inject Random Random
+@inject NavigationManager Nav
+
+@* Mistakes review: the weakest question first, until every mistake is learned. *@
+<TopBar Title="Fehler wiederholen" Back="" />
+
+@if (question is null)
+{
+    <div class="card center">
+        <p class="headline">Alles wiederholt</p>
+        <p class="muted">Alle falsch beantworteten Fragen sind jetzt gelernt.</p>
+    </div>
+    <button class="btn" @onclick='() => Nav.NavigateTo("")'>Zur Startseite</button>
+}
+else
+{
+    <QuestionCard @key="round" Question="question" Label="@label" Chosen="chosen" Reveal="chosen is not null" Locked="chosen is not null"
+                  OnAnswer="Answer" />
+    @if (chosen is not null)
+    {
+        <div class="nav"><button class="btn next" @onclick="Next">Weiter<Icon Name="arrow-right" /></button></div>
+    }
+}
+
+@code {
+    private Question? question;
+    private string label = "";
+    private int? chosen;
+    private int round; // a fresh card for every question, even when the same one comes again
+
+    protected override void OnInitialized() => Next();
+
+    private void Next()
+    {
+        var queue = State.Progress.MistakeQueue(Catalog.Questions, Random);
+        question = queue.Count > 0 ? Catalog[queue[0]] : null;
+        if (question is not null) label = $"Noch {queue.Count} · {State.Progress.BoxOf(question.Number)}/{Progress.MasteredBox} richtig";
+        chosen = null;
+        round++;
+    }
+
+    private void Answer(int answer)
+    {
+        State.Progress.Record(question!.Number, answer == question.Correct);
+        State.Save();
+        chosen = answer;
+    }
+}

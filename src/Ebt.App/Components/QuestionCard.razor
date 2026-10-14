@@ -1,0 +1,94 @@
+@* A question with its answers, shared by practice, mistakes review, exam and exam result. *@
+@inject Catalog Catalog
+@inject IJSRuntime JS
+
+@{
+    var ru = Help ? Catalog.Ru.GetValueOrDefault(Question.Number) : null;
+}
+<section class="question">
+    <div class="qmeta">
+        <span>@Label</span>
+        <span>@(Question.IsState ? "NRW" : "Allgemein") · Nr. @Question.CatalogNumber</span>
+        @if (ru is not null)
+        {
+            <button class="ru-toggle" aria-pressed="@(showRu ? "true" : "false")" aria-label="Russische Übersetzung" @onclick="() => showRu = !showRu">RU</button>
+        }
+    </div>
+    <p class="qtext"><RichText Text="Question.Text" Terms="Help" /></p>
+    @if (ru is not null && showRu)
+    {
+        <p class="ru-line" lang="ru"><RichText Text="ru.Text" /></p>
+    }
+    @if (Question.Image is { } image)
+    {
+        <img class="qimg" src="@image" alt="Bild zur Frage">
+    }
+    <div class="answers">
+        @for (var i = 0; i < Question.Answers.Count; i++)
+        {
+            var answer = i;
+            var state = StateOf(answer);
+            <button class="answer @state @(Locked ? "locked" : "")" aria-disabled="@(Locked ? "true" : null)" @onclick="() => Choose(answer)">
+                <span class="letter">@Letters[answer]</span>
+                <span>
+                    <RichText Text="Question.Answers[answer]" Terms="@(Help && state != Dim)" />
+                    @if (ru is not null && showRu && RichText.Plain(ru.Answers[answer]) != RichText.Plain(Question.Answers[answer]))
+                    {
+                        <span class="ru-line" lang="ru"><RichText Text="ru.Answers[answer]" /></span>
+                    }
+                    @if (state == Pressed)
+                    {
+                        <span class="tag bad"><Icon Name="x" />Deine Antwort</span>
+                    }
+                    else if (state == Lifted)
+                    {
+                        <span class="tag ok"><Icon Name="check" />Richtig</span>
+                    }
+                </span>
+            </button>
+        }
+    </div>
+</section>
+
+@code {
+    private static readonly string[] Letters = ["A", "B", "C", "D"];
+
+    // After answering, the chosen wrong answer sinks in, the correct one lifts out and the rest fades back.
+    private const string Pressed = "pressed", Lifted = "lifted", Dim = "dim", Selected = "selected";
+
+    private bool showRu; // Russian translation shown; pages give each question its own card (@key), so it starts hidden
+
+    [Parameter, EditorRequired] public Question Question { get; set; } = null!;
+    [Parameter, EditorRequired] public string Label { get; set; } = "";
+    [Parameter] public int? Chosen { get; set; }
+
+    /// <summary>Show which answer is correct and whether the chosen one was.</summary>
+    [Parameter] public bool Reveal { get; set; }
+
+    /// <summary>Answers can no longer be chosen.</summary>
+    [Parameter] public bool Locked { get; set; }
+
+    /// <summary>Glossary terms and Russian translation (off in the exam, like in the real test).</summary>
+    [Parameter] public bool Help { get; set; } = true;
+
+    [Parameter] public EventCallback<int> OnAnswer { get; set; }
+
+    /// <summary>A new question starts at the top of the page.</summary>
+    [Parameter] public bool ScrollToTop { get; set; } = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && ScrollToTop) await JS.InvokeVoidAsync("scrollTo", 0, 0);
+    }
+
+    private string StateOf(int answer) => (Reveal, answer == Question.Correct, answer == Chosen) switch
+    {
+        (true, true, _) => Lifted,
+        (true, false, true) => Pressed,
+        (true, false, false) => Dim,
+        (false, _, true) => Selected,
+        _ => "",
+    };
+
+    private Task Choose(int answer) => Locked ? Task.CompletedTask : OnAnswer.InvokeAsync(answer);
+}

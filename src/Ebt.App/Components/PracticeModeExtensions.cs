@@ -1,0 +1,13 @@
+using Ebt.Domain;
+
+namespace Ebt.App.Components;
+
+internal static class PracticeModeExtensions
+{
+    public static string Label(this PracticeMode mode) => mode switch
+    {
+        PracticeMode.Random => "Zufällig",
+        PracticeMode.Unseen => "Nur neue",
+        _ => "Der Reihe nach",
+    };
+}

@@ -1,0 +1,62 @@
+@page "/practice"
+@inject Catalog Catalog
+@inject AppState State
+@inject Random Random
+@inject NavigationManager Nav
+
+<TopBar Title="Üben" Back="" />
+
+@if (run.Order.Count > 0 && !run.IsFinished)
+{
+    <button class="btn primary left hero" @onclick='() => Nav.NavigateTo("practice/run")'>
+        <span><span class="display">Fortsetzen</span><small>@run.Mode.Label() · Frage @(run.Position + 1) von @run.Order.Count</small></span>
+        <Icon Name="arrow-right" />
+    </button>
+}
+<div class="card">
+    <b>Neu starten</b>
+    <div class="spacer"></div>
+    <button class="btn left" @onclick="() => Start(PracticeMode.Order)">
+        <span>@PracticeMode.Order.Label()<small>Frage 1 bis @Catalog.Questions.Count</small></span>
+    </button>
+    <button class="btn left" @onclick="() => Start(PracticeMode.Random)">
+        <span>@PracticeMode.Random.Label()<small>Alle Fragen gemischt</small></span>
+    </button>
+    <button class="btn left" disabled="@(unseen == 0)" @onclick="() => Start(PracticeMode.Unseen)">
+        <span>@PracticeMode.Unseen.Label()<small>@unseen noch nie beantwortet</small></span>
+    </button>
+</div>
+<div class="card">
+    <b>Zu Frage springen</b>
+    <div class="spacer"></div>
+    <form class="goto" @onsubmit="GoTo">
+        <input type="number" inputmode="numeric" min="1" max="@Catalog.Questions.Count" placeholder="1–@Catalog.Questions.Count (NRW: 301–310)"
+               aria-label="Fragenummer" required @bind="number" @bind:event="oninput">
+        <button class="btn primary">Los</button>
+    </form>
+</div>
+
+@code {
+    private PracticeRun run = null!;
+    private int unseen;
+    private int? number;
+
+    protected override void OnInitialized()
+    {
+        run = State.Progress.Practice;
+        unseen = Catalog.Questions.Count(q => State.Progress.IsNew(q.Number));
+    }
+
+    private void Start(PracticeMode mode, int position = 0)
+    {
+        State.Progress.StartPractice(mode, Catalog.Questions, Random, position);
+        State.Save();
+        Nav.NavigateTo("practice/run");
+    }
+
+    // In catalog order, question n is at position n - 1.
+    private void GoTo()
+    {
+        if (number is { } n && Catalog.Contains(n)) Start(PracticeMode.Order, n - 1);
+    }
+}

@@ -1,0 +1,9 @@
+<div class="progress"><div style="width:@Width"></div></div>
+
+@code {
+    [Parameter, EditorRequired] public int Value { get; set; }
+    [Parameter, EditorRequired] public int Max { get; set; }
+
+    // Always with a decimal point, whatever the culture: this is CSS.
+    private string Width => (Max == 0 ? 0 : 100.0 * Value / Max).ToString("0.0", CultureInfo.InvariantCulture) + "%";
+}
