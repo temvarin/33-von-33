@@ -1,0 +1,7 @@
+# Downloaded BAMF question images (re-download: dotnet run --project src/Ebt.Pipeline -- fetch-images)
+.cache/
+
+# Build output
+bin/
+obj/
+publish/
