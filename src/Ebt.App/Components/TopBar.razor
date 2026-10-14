@@ -1,6 +1,7 @@
-@* The page's header, rendered into the layout's top bar. *@
+@* The page's header, rendered into the layout's top bar, and the browser tab's title. *@
 @inject NavigationManager Nav
 
+<PageTitle>@Title – @AppName</PageTitle>
 <SectionContent SectionName="@Section">
     @if (Back is not null)
     {
@@ -18,6 +19,7 @@
 
 @code {
     public const string Section = "topbar";
+    private const string AppName = "33 von 33";
 
     [Parameter, EditorRequired] public string Title { get; set; } = "";
 
