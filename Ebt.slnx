@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ebt.Domain/Ebt.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ebt.Domain.Tests/Ebt.Domain.Tests.csproj" />
+  </Folder>
+</Solution>

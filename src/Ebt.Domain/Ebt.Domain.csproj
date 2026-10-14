@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Shared by the app (runs in the browser via WebAssembly) and the pipeline (writes the app's data). -->
+  <PropertyGroup>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Ebt.Domain.Tests" />
+  </ItemGroup>
+
+</Project>
