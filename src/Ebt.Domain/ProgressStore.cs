@@ -11,13 +11,15 @@ public interface IKeyValueStore
 }
 
 /// <summary>
-/// Persists the user's progress. The schema number marks the stored shape: when it changes,
-/// add a migration from the previous schema here instead of discarding the user's progress.
+/// Persists the user's progress. The schema number marks the stored shape: progress with another
+/// schema is never misread, it starts fresh. There is no migration yet because no released version
+/// stored another schema. When the shape changes after a release, add a migration from the
+/// released schema here instead of discarding the user's progress.
 /// </summary>
 public sealed class ProgressStore(IKeyValueStore store)
 {
     private const string Key = "ebt.progress";
-    private const int Schema = 2; // 1 was the JavaScript version of the app
+    private const int Schema = 2; // 1 was the unreleased JavaScript prototype
 
     public Progress Load()
     {

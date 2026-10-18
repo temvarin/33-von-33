@@ -52,7 +52,7 @@ public class ProgressStoreTests
     [Fact]
     public void Progress_stored_with_another_schema_is_not_misread()
     {
-        // The JavaScript version stored schema 1 in a different shape.
+        // The unreleased JavaScript prototype stored schema 1 in a different shape.
         var memory = new MemoryStore(new() { ["ebt.progress"] = """{"schema":1,"box":{"1":3},"wrong":{}}""" });
 
         Assert.Empty(new ProgressStore(memory).Load().Box);
