@@ -3,6 +3,9 @@ namespace Ebt.Pipeline.Tests;
 /// <summary>A minimal, valid set of sources; tests change one thing and expect exactly that to be reported.</summary>
 internal static class Fixtures
 {
+    /// <summary>The catalogue <see cref="Valid"/> sources make up: question 1 only.</summary>
+    public static readonly CatalogShape Shape = new(General: 1, State: 0);
+
     public static SourceData Valid(
         IReadOnlyList<BamfAnswer>? answers = null,
         IReadOnlyDictionary<int, string>? texts = null,

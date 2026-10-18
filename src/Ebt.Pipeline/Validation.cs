@@ -1,12 +1,37 @@
 using System.Text.RegularExpressions;
+using Ebt.Domain;
 
 namespace Ebt.Pipeline;
+
+/// <summary>The question numbers a catalogue consists of: general questions from 1, state questions from 301.</summary>
+public sealed record CatalogShape(int General, int State)
+{
+    /// <summary>Nordrhein-Westfalen: 300 general and 10 state questions.</summary>
+    public static readonly CatalogShape Nrw = new(300, 10);
+
+    public IEnumerable<int> Numbers =>
+        Enumerable.Range(1, General).Concat(Enumerable.Range(Question.FirstStateNumber, State));
+}
 
 /// <summary>Content rules for the sources. Every rule returns human-readable problems; none means the data may be built.</summary>
 public static partial class Validation
 {
-    public static IReadOnlyList<string> Check(SourceData src) =>
-        [.. Questions(src), .. Translations(src), .. Glossary(src)];
+    public static IReadOnlyList<string> Check(SourceData src, CatalogShape shape) =>
+        [.. Completeness(src, shape), .. Questions(src), .. Translations(src), .. Glossary(src)];
+
+    /// <summary>Every question of the catalogue exactly once, and nothing else: the app finds question n at position n − 1.</summary>
+    internal static IEnumerable<string> Completeness(SourceData src, CatalogShape shape)
+    {
+        foreach (var twice in src.Answers.GroupBy(a => a.Nr).Where(g => g.Count() > 1).OrderBy(g => g.Key))
+            yield return $"{twice.Key}: question appears {twice.Count()} times";
+
+        var expected = shape.Numbers.ToHashSet();
+        var actual = src.Answers.Select(a => a.Nr).ToHashSet();
+        var missing = expected.Except(actual).Order().ToList();
+        if (missing.Count > 0) yield return $"questions missing: {Ranges(missing)}";
+        foreach (var nr in actual.Except(expected).Order())
+            yield return $"{nr}: not a question of this catalogue (expected {Ranges(shape.Numbers)})";
+    }
 
     internal static IEnumerable<string> Questions(SourceData src)
     {
@@ -79,6 +104,18 @@ public static partial class Validation
     }
 
     private static int Count(string s, char c) => s.Count(x => x == c);
+
+    /// <summary>Sorted numbers as ranges: 2, 5–9, 301–310.</summary>
+    private static string Ranges(IEnumerable<int> sorted)
+    {
+        var ranges = new List<(int From, int To)>();
+        foreach (var n in sorted)
+        {
+            if (ranges.Count > 0 && ranges[^1].To == n - 1) ranges[^1] = (ranges[^1].From, n);
+            else ranges.Add((n, n));
+        }
+        return string.Join(", ", ranges.Select(r => r.From == r.To ? $"{r.From}" : $"{r.From}–{r.To}"));
+    }
 
     [GeneratedRegex(@"[а-яё]", RegexOptions.IgnoreCase)]
     private static partial Regex Cyrillic();

@@ -54,7 +54,7 @@
         Nav.NavigateTo("practice/run");
     }
 
-    // In catalog order, question n is at position n - 1.
+    // Question n is at position n - 1: the pipeline only builds a catalogue without gaps (Validation.Completeness).
     private void GoTo()
     {
         if (number is { } n && Catalog.Contains(n)) Start(PracticeMode.Order, n - 1);

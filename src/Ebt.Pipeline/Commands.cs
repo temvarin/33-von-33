@@ -75,7 +75,7 @@ internal static class Commands
     private static bool TryBuild(Paths paths, [NotNullWhen(true)] out BuildOutput? output)
     {
         var src = SourceData.Load(paths);
-        var problems = Validation.Check(src);
+        var problems = Validation.Check(src, CatalogShape.Nrw);
         if (problems.Count > 0)
         {
             Console.Error.WriteLine($"{problems.Count} problem(s) in content/:\n  " + string.Join("\n  ", problems));

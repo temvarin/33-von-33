@@ -3,7 +3,7 @@ namespace Ebt.Pipeline.Tests;
 public class ValidationTests
 {
     [Fact]
-    public void Valid_sources_have_no_problems() => Assert.Empty(Validation.Check(Fixtures.Valid()));
+    public void Valid_sources_have_no_problems() => Assert.Empty(Validation.Check(Fixtures.Valid(), Fixtures.Shape));
 
     [Fact]
     public void Reports_a_question_without_text() =>
@@ -41,7 +41,51 @@ public class ValidationTests
     [Fact]
     public void Accepts_glosses_on_wrong_answers_too() =>
         Assert.Empty(Validation.Check(Fixtures.Valid(
-            translations: Fixtures.WithAnswers("монархия (власть короля)", "республика (выборный глава)", "диктатура", "1949"))));
+            translations: Fixtures.WithAnswers("монархия (власть короля)", "республика (выборный глава)", "диктатура", "1949")),
+            Fixtures.Shape));
+
+    [Fact]
+    public void Reports_missing_questions_as_ranges() =>
+        AssertSingleProblem(Fixtures.Valid(), new CatalogShape(General: 5, State: 2), "questions missing: 2–5, 301–302");
+
+    [Fact]
+    public void Reports_a_question_that_appears_twice()
+    {
+        var answer = Fixtures.Valid().Answers[0];
+        AssertSingleProblem(Fixtures.Valid(answers: [answer, answer]), "1: question appears 2 times");
+    }
+
+    [Fact]
+    public void Reports_a_number_outside_the_catalogue()
+    {
+        var src = Fixtures.Valid() with
+        {
+            Answers = [.. Fixtures.Valid().Answers, new BamfAnswer(311, 101, 0, ["a", "b", "c", "d"])],
+            Texts = new Dictionary<int, string> { [1] = Fixtures.Valid().Texts[1], [311] = "Eine Frage?" },
+            Translations = new Dictionary<int, Translation>
+            {
+                [1] = Fixtures.Valid().Translations[1],
+                [311] = new("Вопрос?", ["а", "б", "в", "г"]),
+            },
+        };
+        AssertSingleProblem(src, "311: not a question of this catalogue (expected 1)");
+    }
+
+    [Fact]
+    public void Accepts_general_and_state_questions_in_their_ranges()
+    {
+        var src = Fixtures.Valid() with
+        {
+            Answers = [.. Fixtures.Valid().Answers, new BamfAnswer(301, 101, 0, ["a", "b", "c", "d"])],
+            Texts = new Dictionary<int, string> { [1] = Fixtures.Valid().Texts[1], [301] = "Eine Frage?" },
+            Translations = new Dictionary<int, Translation>
+            {
+                [1] = Fixtures.Valid().Translations[1],
+                [301] = new("Вопрос?", ["а", "б", "в", "г"]),
+            },
+        };
+        Assert.Empty(Validation.Check(src, new CatalogShape(General: 1, State: 1)));
+    }
 
     [Fact]
     public void Reports_a_word_form_used_by_two_terms() =>
@@ -68,5 +112,8 @@ public class ValidationTests
         AssertSingleProblem(Fixtures.Valid(pictures: new HashSet<int> { 999 }), "pictures/999.png belongs to no question");
 
     private static void AssertSingleProblem(SourceData src, string expected) =>
-        Assert.Equal([expected], Validation.Check(src));
+        AssertSingleProblem(src, Fixtures.Shape, expected);
+
+    private static void AssertSingleProblem(SourceData src, CatalogShape shape, string expected) =>
+        Assert.Equal([expected], Validation.Check(src, shape));
 }
