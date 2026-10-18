@@ -26,7 +26,7 @@ Correctness matters more than features here: a wrong answer in a practice app ge
 - **Practice** in order, shuffled or only unseen questions, or jump to a question number. Answers give immediate feedback.
 - **Mistakes review** with Leitner boxes: a question counts as learned after three correct answers in a row.
 - **Mock exam** following the official rules: 30 general and 3 NRW questions, 60 minutes, feedback only at the end, German only.
-- **Russian help:** 320 glossary terms highlighted in the questions, each with a Russian explanation one tap away, and a translation of every question and answer. No translation gives away the correct answer – the pipeline enforces it.
+- **Russian help:** 320 glossary terms highlighted in the questions, each with a Russian explanation one tap away, and a translation of every question and answer. Translations were reviewed so they don't give away the correct answer; the pipeline additionally flags the typical slip, an explanation in brackets added only to the correct answer.
 - **Progress statistics** and the history of mock exams.
 - **Works offline**, installs to the home screen on iPhone and Android, follows the phone's dark mode. No account and no tracking: progress stays in the browser.
 
@@ -39,14 +39,14 @@ Then open it once while online so everything is cached for offline use. Updates 
 
 ## Engineering highlights
 
-- **One domain, two consumers.** `Ebt.Domain` holds the content types and the learning rules. The pipeline writes the app's data with the same types the app reads it with, so a change to the data format breaks the build, not the app.
-- **Content is validated like code.** The pipeline checks the sources against content rules, pre-parses all text so the app does no parsing, and CI fails if the committed data differs from what the sources produce.
+- **One domain, two consumers.** `Ebt.Domain` holds the content types and the learning rules. The pipeline writes the app's data with the same types the app reads it with, so the two can't drift apart unnoticed: a changed type fails to compile in both, and a test reads the JSON form the pipeline writes.
+- **Content is validated like code.** The pipeline checks the sources against content rules – the complete catalogue with every question exactly once, four answers each, translations for everything – pre-parses all text so the app does no parsing, and CI fails if the committed data differs from what the sources produce.
 - **Encapsulated domain state.** State changes only through domain methods (`Record`, `StartExam`, `Exam.Answer`); setters are internal and exist for source-generated JSON.
 - **Deterministic tests.** Clock (`TimeProvider`) and randomness are injected, so the domain is tested with xUnit and the components with bUnit against a fake clock.
 - **Trimming-safe and lean.** Source-generated JSON instead of reflection, no ICU culture data, self-hosted fonts subset to Latin and Cyrillic.
-- **Offline by design.** The service worker precaches every file of a release, verifies each against its build-time hash and serves the app from a versioned cache.
-- **Strict build.** .NET analyzers at the recommended level, warnings are errors.
-- **Accessible.** Every text colour meets WCAG AA in light and dark mode, colour is never the only signal, and motion respects *reduce motion*.
+- **Offline by design.** The service worker precaches every file of a release, verifies each against its build-time hash (except `index.html`, which the deploy job adjusts after the build) and serves the app from a versioned cache.
+- **Strict build.** .NET analyzers at the recommended level, warnings are errors, the SDK version pinned in `global.json`.
+- **Readable for everyone.** Every text colour meets WCAG AA in light and dark mode, colour is never the only signal, tap targets are at least 44 px, and motion respects *reduce motion*. Full keyboard support for the glossary and dialogs is still to come.
 
 ## Architecture
 
