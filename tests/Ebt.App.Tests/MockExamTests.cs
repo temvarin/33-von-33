@@ -26,6 +26,47 @@ public class MockExamTests : AppTestContext
     }
 
     [Fact]
+    public void After_an_answer_the_exam_moves_on_to_the_next_question()
+    {
+        var page = StartExam();
+        page.FindAll(".answer")[0].Click();
+        Assert.Contains("Frage 1 von 33", page.Markup); // a short moment to see the choice
+
+        Clock.Advance(TimeSpan.FromMilliseconds(250));
+
+        page.WaitForAssertion(() => Assert.Contains("Frage 2 von 33", page.Markup));
+    }
+
+    [Fact]
+    public async Task Going_to_a_question_right_after_an_answer_cancels_the_move_on()
+    {
+        var page = StartExam();
+        page.FindAll(".answer")[0].Click();
+        page.FindAll(".grid button")[9].Click();
+
+        Clock.Advance(TimeSpan.FromSeconds(1));
+        await page.InvokeAsync(() => { }); // runs after anything the delay had queued
+
+        Assert.Contains("Frage 10 von 33", page.Markup);
+        Assert.Equal(9, Progress.Exam!.Position);
+    }
+
+    [Fact]
+    public void Answering_again_replaces_the_pending_move_on()
+    {
+        var page = StartExam();
+        page.FindAll(".answer")[0].Click();
+        page.FindAll(".grid button")[9].Click();
+        page.WaitForAssertion(() => Assert.Contains("Frage 10 von 33", page.Markup));
+        page.FindAll(".answer")[1].Click();
+
+        Clock.Advance(TimeSpan.FromMilliseconds(250));
+
+        // Next unanswered after question 10 is 11, not 2 as the first answer had planned.
+        page.WaitForAssertion(() => Assert.Contains("Frage 11 von 33", page.Markup));
+    }
+
+    [Fact]
     public void When_the_time_is_up_the_exam_is_handed_in_and_the_user_told_why()
     {
         var page = StartExam();

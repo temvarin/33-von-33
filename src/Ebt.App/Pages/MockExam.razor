@@ -47,9 +47,11 @@ else
 }
 
 @code {
+    private static readonly TimeSpan AdvanceDelay = TimeSpan.FromMilliseconds(250);
+
     private Exam? exam;
     private ITimer? timer;
-    private bool left; // the user left the page
+    private CancellationTokenSource? advance; // the pending move to the next question after an answer
 
     protected override void OnInitialized()
     {
@@ -89,17 +91,36 @@ else
         var current = exam!;
         var next = current.Answer(answer);
         State.Save();
-        // Move on to the next unanswered question after a short moment – unless the user left the exam meanwhile.
-        await Task.Delay(250);
-        if (left || State.Progress.Exam != current) return;
+
+        // Move on to the next unanswered question after a short moment. Anything the user does
+        // meanwhile – going to a question, answering again, handing in, leaving – cancels the move.
+        CancelAdvance();
+        advance = new CancellationTokenSource();
+        try
+        {
+            await Task.Delay(AdvanceDelay, Clock, advance.Token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+        if (State.Progress.Exam != current) return; // handed in by the timer
         current.GoTo(next);
         State.Save();
     }
 
     private void GoTo(int position)
     {
+        CancelAdvance();
         exam!.GoTo(position);
         State.Save();
+    }
+
+    private void CancelAdvance()
+    {
+        advance?.Cancel();
+        advance?.Dispose();
+        advance = null;
     }
 
     private async Task ConfirmFinish()
@@ -113,6 +134,7 @@ else
 
     private void Finish()
     {
+        CancelAdvance();
         StopTimer();
         State.Progress.FinishExam(Catalog, Clock.GetUtcNow());
         State.Save();
@@ -127,7 +149,7 @@ else
 
     public void Dispose()
     {
-        left = true;
+        CancelAdvance();
         StopTimer();
     }
 }
