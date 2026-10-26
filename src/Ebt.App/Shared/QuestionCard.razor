@@ -1,6 +1,7 @@
 @* A question with its answers, shared by practice, mistakes review, exam and exam result. *@
 @inject Catalog Catalog
-@inject IJSRuntime JS
+@using Ebt.App.Infrastructure
+@inject BrowserWindow Window
 
 @{
     var ru = Help ? Catalog.Ru.GetValueOrDefault(Question.Number) : null;
@@ -78,7 +79,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && ScrollToTop) await JS.InvokeVoidAsync("scrollTo", 0, 0);
+        if (firstRender && ScrollToTop) await Window.ScrollToTop();
     }
 
     private string StateOf(int answer) => (Reveal, answer == Question.Correct, answer == Chosen) switch

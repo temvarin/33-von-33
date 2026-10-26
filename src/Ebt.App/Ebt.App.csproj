@@ -19,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ebt.Domain\Ebt.Domain.csproj" />
+    <ProjectReference Include="..\Ebt.Content\Ebt.Content.csproj" />
+    <ProjectReference Include="..\Ebt.Learning\Ebt.Learning.csproj" />
   </ItemGroup>
 
   <ItemGroup>

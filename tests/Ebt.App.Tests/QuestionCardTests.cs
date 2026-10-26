@@ -1,5 +1,4 @@
-using Ebt.App.Components;
-using Ebt.App.Services;
+using Ebt.App.Shared;
 
 namespace Ebt.App.Tests;
 

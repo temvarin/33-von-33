@@ -1,6 +1,6 @@
-using Ebt.Domain;
+using Ebt.Content;
 
-namespace Ebt.App.Services;
+namespace Ebt.App.Shared;
 
 public abstract record Modal;
 

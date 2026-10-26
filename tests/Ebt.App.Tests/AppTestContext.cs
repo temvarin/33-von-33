@@ -1,5 +1,6 @@
-using Ebt.App.Services;
-using Ebt.Domain;
+using Ebt.App.Shared;
+using Ebt.Content;
+using Ebt.Learning;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Time.Testing;
@@ -15,7 +16,7 @@ public abstract class AppTestContext : BunitContext
     protected static readonly Catalog Catalog = new(
         [
             .. Enumerable.Range(1, 40).Select(n => Question(n)),
-            .. Enumerable.Range(Domain.Question.FirstStateNumber, 5).Select(n => Question(n, isState: true)),
+            .. Enumerable.Range(Content.Question.FirstStateNumber, 5).Select(n => Question(n, isState: true)),
         ],
         [Steuern],
         new Dictionary<int, Translation>

@@ -1,6 +1,5 @@
 using Ebt.App;
-using Ebt.App.Services;
-using Ebt.Domain;
+using Ebt.App.Infrastructure;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

@@ -1,7 +1,7 @@
-using Ebt.Domain;
+using Ebt.Learning;
 using Microsoft.JSInterop;
 
-namespace Ebt.App.Services;
+namespace Ebt.App.Infrastructure;
 
 /// <summary>The browser's localStorage. Called synchronously: in WebAssembly, JavaScript runs in the same thread.</summary>
 internal sealed class LocalStorage(IJSRuntime js) : IKeyValueStore
