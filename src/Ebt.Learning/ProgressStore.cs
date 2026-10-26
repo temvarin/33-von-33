@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Ebt.Domain;
+namespace Ebt.Learning;
 
 /// <summary>Where progress is kept (the browser's localStorage in the app, memory in tests).</summary>
 public interface IKeyValueStore
@@ -11,10 +11,11 @@ public interface IKeyValueStore
 }
 
 /// <summary>
-/// Persists the user's progress. The schema number marks the stored shape: progress with another
-/// schema is never misread, it starts fresh. There is no migration yet because no released version
-/// stored another schema. When the shape changes after a release, add a migration from the
-/// released schema here instead of discarding the user's progress.
+/// Persists the user's progress. It is stored in its own records (<see cref="ProgressV2"/>), mapped to and from
+/// the domain here, so the domain types can change without changing what is read from the phone. The schema
+/// number marks the stored shape: progress with another schema is never misread, it starts fresh. There is no
+/// migration yet because no released version stored another schema. When the shape changes after a release,
+/// add records for the new schema and a migration from the released one instead of discarding the user's progress.
 /// </summary>
 public sealed class ProgressStore(IKeyValueStore store)
 {
@@ -27,7 +28,7 @@ public sealed class ProgressStore(IKeyValueStore store)
         {
             var json = store.Read(Key);
             var stored = json is null ? null : JsonSerializer.Deserialize(json, ProgressJson.Default.StoredProgress);
-            return stored is { Schema: Schema, Progress: { } progress } ? progress : new Progress();
+            return stored is { Schema: Schema, Progress: { } progress } ? ProgressSchema2.ToProgress(progress) : new Progress();
         }
         catch (JsonException)
         {
@@ -36,10 +37,11 @@ public sealed class ProgressStore(IKeyValueStore store)
     }
 
     public void Save(Progress progress) =>
-        store.Write(Key, JsonSerializer.Serialize(new StoredProgress(Schema, progress), ProgressJson.Default.StoredProgress));
+        store.Write(Key, JsonSerializer.Serialize(new StoredProgress(Schema, ProgressSchema2.From(progress)), ProgressJson.Default.StoredProgress));
 }
 
-internal sealed record StoredProgress(int Schema, Progress Progress);
+/// <param name="Progress">In the shape of <paramref name="Schema"/>; read only when that is the current schema.</param>
+internal sealed record StoredProgress(int Schema, ProgressV2? Progress);
 
 [JsonSourceGenerationOptions(
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
