@@ -7,6 +7,7 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Ebt.App.Tests/Ebt.App.Tests.csproj" />
+    <Project Path="tests/Ebt.Architecture.Tests/Ebt.Architecture.Tests.csproj" />
     <Project Path="tests/Ebt.Content.Tests/Ebt.Content.Tests.csproj" />
     <Project Path="tests/Ebt.Learning.Tests/Ebt.Learning.Tests.csproj" />
     <Project Path="tests/Ebt.Pipeline.Tests/Ebt.Pipeline.Tests.csproj" />
