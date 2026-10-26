@@ -12,13 +12,10 @@ namespace Ebt.App.Tests;
 /// <summary>The session services without any UI: every change is saved at once, and the exam keeps its time.</summary>
 public sealed class SessionTests : IDisposable
 {
-    private static readonly Catalog Catalog = new(
-        [.. Enumerable.Range(1, 40).Select(n => Question(n)), .. Enumerable.Range(Content.Question.FirstStateNumber, 5).Select(n => Question(n, isState: true))],
-        [],
-        new SortedDictionary<int, Translation>());
+    private static readonly Catalog Catalog = AppTestContext.Catalog;
 
     private readonly FakeTimeProvider _clock = new(new DateTimeOffset(2026, 10, 13, 10, 0, 0, TimeSpan.Zero));
-    private readonly MemoryStore _storage = new();
+    private readonly AppTestContext.MemoryStore _storage = new();
     private readonly ServiceProvider _services;
     private readonly List<ExamEnd> _ended = [];
 
@@ -53,10 +50,9 @@ public sealed class SessionTests : IDisposable
         var practice = _services.GetRequiredService<PracticeSession>();
         practice.Start(PracticeMode.Order);
 
-        var correct = practice.Answer(Catalog[1], answer: 0);
+        practice.Answer(Catalog[1], answer: 0); // wrong: 3 is correct
         practice.Next();
 
-        Assert.False(correct);
         Assert.Equal(1, Stored.Practice.Position);
         Assert.Equal(0, Stored.BoxOf(1));
         Assert.False(Stored.IsNew(1));
@@ -143,15 +139,5 @@ public sealed class SessionTests : IDisposable
 
         Assert.Equal([ExamEnd.HandedIn], _ended);
         Assert.Single(Stored.Exams);
-    }
-
-    private static Question Question(int n, bool isState = false) =>
-        new(n, [new($"Frage {n}")], [[new("A")], [new("B")], [new("C")], [new("D")]], Correct: 3, IsState: isState);
-
-    private sealed class MemoryStore : IKeyValueStore
-    {
-        private readonly Dictionary<string, string> _data = [];
-        public string? Read(string key) => _data.GetValueOrDefault(key);
-        public void Write(string key, string value) => _data[key] = value;
     }
 }

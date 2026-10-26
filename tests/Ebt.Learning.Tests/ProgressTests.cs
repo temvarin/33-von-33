@@ -110,11 +110,13 @@ public class ProgressTests
         var q2 = questions[1];
         var p = new Progress();
 
-        Assert.False(p.RecordAnswer(q2, (q2.Correct + 1) % 4));
+        p.RecordAnswer(q2, (q2.Correct + 1) % 4);
+        Assert.Equal(0, p.BoxOf(2));
         Assert.Equal(1, p.CountMistakes(questions));
         Assert.Equal([2], p.MistakeQueue(questions, Fixtures.Random()));
 
-        for (var i = 0; i < Progress.MasteredBox; i++) Assert.True(p.RecordAnswer(q2, q2.Correct));
+        for (var i = 0; i < Progress.MasteredBox; i++) p.RecordAnswer(q2, q2.Correct);
+        Assert.Equal(Progress.MasteredBox, p.BoxOf(2));
         Assert.Equal(0, p.CountMistakes(questions));
     }
 }

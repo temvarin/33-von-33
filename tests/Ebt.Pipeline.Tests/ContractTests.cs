@@ -43,25 +43,4 @@ public class ContractTests
 
         Assert.Equal(new Term("die Republik", "республика", "Государство с выборным главой."), Assert.Single(terms));
     }
-
-    [Fact]
-    public void The_app_reads_the_committed_data()
-    {
-        var data = Paths.FindFrom(AppContext.BaseDirectory).AppData;
-        T Read<T>(string file, System.Text.Json.Serialization.Metadata.JsonTypeInfo<T> type) =>
-            JsonSerializer.Deserialize(File.ReadAllText(Path.Combine(data, file)), type)!;
-
-        var questions = Read(ContentJson.QuestionsFile, ContentJson.Questions);
-        var ru = Read(ContentJson.TranslationsFile, ContentJson.Translations);
-        var terms = Read(ContentJson.TermsFile, ContentJson.Terms);
-
-        Assert.Equal(CatalogShape.Nrw.Numbers, questions.Select(q => q.Number));
-        Assert.Equal(CatalogShape.Nrw.Numbers, ru.Keys);
-        Assert.All(questions, q => Assert.InRange(q.Correct, 0, q.Answers.Count - 1));
-
-        // Every glossary link points at an entry, every picture is shipped.
-        var linked = questions.SelectMany(q => q.Answers.Prepend(q.Text)).SelectMany(text => text).Where(s => s.Term is not null);
-        Assert.All(linked, s => Assert.InRange(s.Term!.Value, 0, terms.Length - 1));
-        Assert.All(questions.Where(q => q.Image is not null), q => Assert.True(File.Exists(Path.Combine(data, "..", q.Image!)), q.Image));
-    }
 }

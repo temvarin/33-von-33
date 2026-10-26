@@ -68,7 +68,6 @@ public sealed class Catalog(IReadOnlyList<Question> questions, IReadOnlyList<Ter
     public IReadOnlyDictionary<int, Translation> Ru { get; } = ru;
 
     public Question this[int number] => _byNumber[number];
-    public bool Contains(int number) => _byNumber.ContainsKey(number);
 }
 
 internal sealed class SegmentConverter : JsonConverter<Segment>

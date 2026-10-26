@@ -81,14 +81,8 @@ public sealed class Progress
         }
     }
 
-    /// <summary>Records the chosen answer to a question.</summary>
-    /// <returns>Whether it was the correct one.</returns>
-    public bool RecordAnswer(Question question, int answer)
-    {
-        var correct = answer == question.Correct;
-        Record(question.Number, correct);
-        return correct;
-    }
+    /// <summary>Records the chosen answer to a question: right if it is the correct one.</summary>
+    public void RecordAnswer(Question question, int answer) => Record(question.Number, answer == question.Correct);
 
     public int BoxOf(int number) => Box.GetValueOrDefault(number);
 
@@ -152,12 +146,9 @@ public sealed class Progress
         Exam = Exam.Create(questions, now, random);
 
     /// <summary>Drops the exam in progress if it was abandoned (see <see cref="Exam.IsAbandoned"/>).</summary>
-    /// <returns>Whether the progress changed.</returns>
-    public bool DropAbandonedExam(DateTimeOffset now)
+    public void DropAbandonedExam(DateTimeOffset now)
     {
-        if (Exam?.IsAbandoned(now) != true) return false;
-        Exam = null;
-        return true;
+        if (Exam?.IsAbandoned(now) == true) Exam = null;
     }
 
     /// <summary>

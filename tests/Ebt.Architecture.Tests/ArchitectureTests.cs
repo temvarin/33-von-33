@@ -13,8 +13,8 @@ namespace Ebt.Architecture.Tests;
 /// <summary>
 /// The structure the code must keep, checked on the compiled code: which part may use which. A rule written only in a
 /// README erodes one convenient call at a time. Each rule says why it exists. Some rules are kept by the compiler
-/// instead: the project references (the pipeline references Ebt.Content only, ADR 9) and the internal constructors
-/// that only ProgressStore uses to rebuild stored progress (ADR 10).
+/// instead: the project references (the pipeline references Ebt.Content only) and the internal constructors that
+/// only ProgressStore uses to rebuild stored progress.
 /// </summary>
 public class ArchitectureTests
 {
@@ -41,7 +41,7 @@ public class ArchitectureTests
         Types.InAssembly(Learning).That().DoNotHaveNameMatching(@"^(ProgressStore|StoredProgress|ProgressJson|ProgressSchema2|\w+V2)$")
             .ShouldNot().HaveDependencyOnAny("System.Text.Json"),
         "Progress is stored in records of its own (ProgressSchema2.cs), mapped in ProgressStore: the model can then "
-        + "change freely, and the stored format changes only when a schema does (ADR 10).");
+        + "change freely, and the stored format changes only when a schema does (README, Engineering highlights).");
 
     [Fact]
     public void The_domain_s_state_changes_only_through_its_methods()
@@ -63,7 +63,7 @@ public class ArchitectureTests
         Types.InAssembly(App).That().ResideInNamespaceMatching(Within("Ebt.App"))
             .Should().ResideInNamespaceMatching(
                 $@"^Ebt\.App(\.Shared|\.Infrastructure|\.Features\.({string.Join('|', FeatureNames)}))?$"),
-        "The app is split by feature (FoSA, modular monolith): a new folder is either a new feature, added to "
+        "The app is split by feature, a modular monolith in the sense of Fundamentals of Software Architecture: a new folder is either a new feature, added to "
         + "FeatureNames here, or belongs into an existing module.");
 
     [Theory]
@@ -103,7 +103,7 @@ public class ArchitectureTests
     public void Components_ask_the_learning_state_questions_but_change_nothing_themselves()
     {
         // Pages read AppState.Progress. A page that changed it directly would show a change that is never saved:
-        // changes go through the session services, which save each one (AppState.Change, ADR 11). Read from the
+        // changes go through the session services, which save each one (AppState.Change). Read from the
         // compiled code: dependency rules can't tell a question from a change, both are calls on the same type.
         var components = App.GetTypes().Where(t => t.IsAssignableTo(typeof(ComponentBase))).Select(t => t.FullName).ToHashSet();
         using var app = ModuleDefinition.ReadModule(App.Location);

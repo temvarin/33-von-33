@@ -13,7 +13,7 @@
         <b>So läuft die Prüfung ab</b>
         <ul class="rules">
             <li>@Exam.QuestionCount Fragen: @Exam.GeneralQuestions allgemeine + @Exam.StateQuestions zu NRW</li>
-            <li>@Exam.Duration.TotalMinutes.ToString("0", CultureInfo.InvariantCulture) Minuten Zeit</li>
+            <li>@((int)Exam.Duration.TotalMinutes) Minuten Zeit</li>
             <li>Bestanden ab @Exam.PassMark richtigen Antworten</li>
             <li>Die Lösungen siehst du erst am Ende</li>
         </ul>

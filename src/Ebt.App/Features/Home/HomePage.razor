@@ -21,7 +21,7 @@
         <Icon Name="repeat" />Fehler<small>@(mistakes > 0 ? $"{mistakes} offen" : "Keine offen")</small>
     </button>
     <button class="tile" @onclick='() => Nav.NavigateTo("exam")'>
-        <Icon Name="clipboard-check" />Prüfung<small>@(examLeft is { } left ? $"Läuft · noch {(int)Math.Ceiling(left.TotalMinutes)} Min." : $"{Exam.QuestionCount} Fragen · {Exam.Duration.TotalMinutes:0} Min.")</small>
+        <Icon Name="clipboard-check" />Prüfung<small>@(examLeft is { } left ? $"Läuft · noch {(int)Math.Ceiling(left.TotalMinutes)} Min." : $"{Exam.QuestionCount} Fragen · {(int)Exam.Duration.TotalMinutes} Min.")</small>
     </button>
     <button class="tile" @onclick='() => Nav.NavigateTo("glossary")'>
         <Icon Name="language" /><span lang="ru">Словарь</span><small>@Catalog.Terms.Count Begriffe</small>

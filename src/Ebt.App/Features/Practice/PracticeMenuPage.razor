@@ -47,7 +47,7 @@
         run = Session.Run;
         unseen = Catalog.Questions.Count(q => State.Progress.IsNew(q.Number));
         (first, last) = (Catalog.Questions.Min(q => q.Number), Catalog.Questions.Max(q => q.Number));
-        var state = Catalog.Questions.Where(q => q.IsState).Select(q => q.Number).DefaultIfEmpty().ToList();
+        var state = Catalog.Questions.Where(q => q.IsState).Select(q => q.Number).ToList();
         (stateFirst, stateLast) = (state.Min(), state.Max());
     }
 

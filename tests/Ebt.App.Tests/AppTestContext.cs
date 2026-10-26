@@ -13,7 +13,7 @@ public abstract class AppTestContext : BunitContext
     protected static readonly Term Steuern = new("die Steuern", "налоги", "Обязательные платежи государству.");
 
     /// <summary>Question 1 has the glossary term "Steuern" in answer B and a Russian translation; 301 is a state question.</summary>
-    protected static readonly Catalog Catalog = new(
+    internal static readonly Catalog Catalog = new(
         [
             .. Enumerable.Range(1, 40).Select(n => Question(n)),
             .. Enumerable.Range(Content.Question.FirstStateNumber, 5).Select(n => Question(n, isState: true)),
@@ -46,7 +46,7 @@ public abstract class AppTestContext : BunitContext
         Correct: 3,
         IsState: isState);
 
-    private sealed class MemoryStore : IKeyValueStore
+    internal sealed class MemoryStore : IKeyValueStore
     {
         private readonly Dictionary<string, string> _data = [];
         public string? Read(string key) => _data.GetValueOrDefault(key);

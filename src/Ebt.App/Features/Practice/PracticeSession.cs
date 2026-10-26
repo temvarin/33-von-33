@@ -15,9 +15,7 @@ public sealed class PracticeSession(AppState state, Catalog catalog, Random rand
     /// <returns>false if there is no such question; the current run stays.</returns>
     public bool StartAt(int number) => state.Change(p => p.StartPracticeAt(number, catalog.Questions));
 
-    /// <returns>Whether the answer was correct.</returns>
-    public bool Answer(Question question, int answer) =>
-        state.Change(p => p.RecordAnswer(question, answer));
+    public void Answer(Question question, int answer) => state.Change(p => p.RecordAnswer(question, answer));
 
     public void Next() => state.Change(p => p.Practice.Next());
 

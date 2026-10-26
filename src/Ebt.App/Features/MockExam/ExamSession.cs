@@ -37,6 +37,7 @@ public sealed class ExamSession(AppState state, Catalog catalog, TimeProvider cl
     /// <summary>The exam in progress, if any.</summary>
     public Exam? Exam => state.Progress.Exam;
 
+    /// <summary>Time left in the exam in progress; zero if there is none.</summary>
     public TimeSpan Remaining => Exam?.Remaining(clock.GetUtcNow()) ?? TimeSpan.Zero;
 
     /// <summary>A clock tick or a move to the next question: time to show the new state.</summary>
