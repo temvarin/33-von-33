@@ -12,10 +12,11 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
+    <Using Include="Ebt.Content" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ebt.Domain\Ebt.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Ebt.Learning\Ebt.Learning.csproj" />
   </ItemGroup>
 
 </Project>

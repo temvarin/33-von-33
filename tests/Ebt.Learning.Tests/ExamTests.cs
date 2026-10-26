@@ -1,4 +1,4 @@
-namespace Ebt.Domain.Tests;
+namespace Ebt.Learning.Tests;
 
 public class ExamTests
 {
@@ -34,8 +34,20 @@ public class ExamTests
 
         Assert.False(exam.IsAbandoned(end.AddTicks(-1)));
         Assert.True(exam.IsAbandoned(end));
-        exam.Answer(1);
+        exam.Answer(1, Now);
         Assert.False(exam.IsAbandoned(end));
+    }
+
+    [Fact]
+    public void Once_the_time_is_up_the_exam_takes_no_more_answers()
+    {
+        var exam = NewExam();
+
+        exam.Answer(0, Now + Exam.Duration - TimeSpan.FromTicks(1));
+        exam.GoTo(1);
+
+        Assert.Throws<InvalidOperationException>(() => exam.Answer(0, Now + Exam.Duration));
+        Assert.Null(exam.Answers[1]);
     }
 
     [Fact]
@@ -43,10 +55,10 @@ public class ExamTests
     {
         var exam = NewExam();
         exam.GoTo(2);
-        exam.Answer(0);
+        exam.Answer(0, Now);
         exam.GoTo(1);
 
-        Assert.Equal(3, exam.Answer(0)); // 2 is answered already
+        Assert.Equal(3, exam.Answer(0, Now)); // 2 is answered already
     }
 
     [Fact]
@@ -55,7 +67,7 @@ public class ExamTests
         var exam = NewExam();
         exam.GoTo(exam.Questions.Count - 1);
 
-        Assert.Equal(exam.Questions.Count - 1, exam.Answer(0));
+        Assert.Equal(exam.Questions.Count - 1, exam.Answer(0, Now));
     }
 
     private static Exam NewExam(Progress? progress = null) =>
@@ -75,7 +87,7 @@ public class ExamTests
     private static void AnswerAt(Exam exam, int position, int answer)
     {
         exam.GoTo(position);
-        exam.Answer(answer);
+        exam.Answer(answer, Now);
     }
 
     [Fact]

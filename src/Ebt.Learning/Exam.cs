@@ -1,31 +1,38 @@
-using System.Text.Json.Serialization;
+using Ebt.Content;
 
-namespace Ebt.Domain;
+namespace Ebt.Learning;
 
 /// <summary>A mock exam in the official format: 30 general + 3 state questions, 60 minutes, passed with 17 correct.</summary>
-/// <remarks>State changes only through its methods; the internal setters exist for deserialization.</remarks>
+/// <remarks>State changes only through its methods. <see cref="ProgressStore"/> stores it in its own format.</remarks>
 public sealed class Exam
 {
     public const int GeneralQuestions = 30;
     public const int StateQuestions = 3;
+    public const int QuestionCount = GeneralQuestions + StateQuestions;
     public const int PassMark = 17;
     public static readonly TimeSpan Duration = TimeSpan.FromMinutes(60);
 
-    [JsonConstructor]
-    internal Exam() { }
+    /// <summary>An exam as it was left: started, with these answers, showing this position.</summary>
+    internal Exam(DateTimeOffset started, IReadOnlyList<int> questions, IReadOnlyList<int?> answers, int position)
+    {
+        Started = started;
+        Questions = questions;
+        Answers = answers;
+        Position = position;
+    }
 
-    [JsonInclude] public DateTimeOffset Started { get; internal set; }
+    public DateTimeOffset Started { get; }
 
     /// <summary>Question numbers in exam order.</summary>
-    [JsonInclude] public IReadOnlyList<int> Questions { get; internal set; } = [];
+    public IReadOnlyList<int> Questions { get; }
 
     /// <summary>Chosen answer per question; null = not answered.</summary>
-    [JsonInclude] public IReadOnlyList<int?> Answers { get; internal set; } = [];
+    public IReadOnlyList<int?> Answers { get; private set; }
 
     /// <summary>The question currently shown.</summary>
-    [JsonInclude] public int Position { get; internal set; }
+    public int Position { get; private set; }
 
-    [JsonIgnore] public int AnsweredCount => Answers.Count(a => a is not null);
+    public int AnsweredCount => Answers.Count(a => a is not null);
 
     internal static Exam Create(IEnumerable<Question> questions, DateTimeOffset now, Random random)
     {
@@ -33,7 +40,7 @@ public sealed class Exam
         var general = all.Where(q => !q.IsState).Shuffled(random).Take(GeneralQuestions);
         var state = all.Where(q => q.IsState).Shuffled(random).Take(StateQuestions);
         var numbers = general.Concat(state).Select(q => q.Number).Shuffled(random);
-        return new Exam { Started = now, Questions = numbers, Answers = new int?[numbers.Length] };
+        return new Exam(now, numbers, new int?[numbers.Length], position: 0);
     }
 
     public TimeSpan Remaining(DateTimeOffset now) => Started + Duration - now;
@@ -50,10 +57,12 @@ public sealed class Exam
         Position = position;
     }
 
-    /// <summary>Answers the current question.</summary>
+    /// <summary>Answers the current question, as long as the time isn't up.</summary>
     /// <returns>The position to show next: the next unanswered question, if there is one after this.</returns>
-    public int Answer(int answer)
+    /// <exception cref="InvalidOperationException">The time is up (<see cref="IsOver"/>): the exam only takes answers for 60 minutes.</exception>
+    public int Answer(int answer, DateTimeOffset now)
     {
+        if (IsOver(now)) throw new InvalidOperationException("The time is up: the exam takes no more answers.");
         var answers = Answers.ToArray();
         answers[Position] = answer;
         Answers = answers;
@@ -70,7 +79,7 @@ public sealed record ExamResult(DateTimeOffset Date, IReadOnlyList<int> Question
     /// <summary>How many results are kept.</summary>
     public const int Kept = 50;
 
-    [JsonIgnore] public int Total => Questions.Count;
-    [JsonIgnore] public int Score => Total - Wrong.Count;
-    [JsonIgnore] public bool Passed => Score >= Exam.PassMark;
+    public int Total => Questions.Count;
+    public int Score => Total - Wrong.Count;
+    public bool Passed => Score >= Exam.PassMark;
 }

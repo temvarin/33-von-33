@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The learning rules: Leitner progress, practice runs, mock exams and how progress is stored. Used by the app only. -->
+  <PropertyGroup>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Ebt.Learning.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ebt.Content\Ebt.Content.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-namespace Ebt.Domain.Tests;
+namespace Ebt.Learning.Tests;
 
 public class ProgressTests
 {
@@ -88,5 +88,33 @@ public class ProgressTests
         Assert.Equal(2, counts.New);
         Assert.Equal([1, 0, 0, 1], counts.InBox);
         Assert.Equal(1, p.CountMastered(questions));
+    }
+
+    [Fact]
+    public void A_run_can_start_at_a_question_by_its_number_not_its_position()
+    {
+        var questions = Fixtures.Catalog(3, 2).Questions; // 1, 2, 3, 301, 302: no question 4
+        var p = new Progress();
+
+        Assert.True(p.StartPracticeAt(301, questions));
+        Assert.Equal((PracticeMode.Order, 301), (p.Practice.Mode, p.Practice.Current));
+
+        Assert.False(p.StartPracticeAt(4, questions));
+        Assert.Equal(301, p.Practice.Current); // the run stays
+    }
+
+    [Fact]
+    public void Answers_are_recorded_against_the_correct_one_and_mistakes_counted_until_learned()
+    {
+        var questions = Fixtures.Catalog(4, 0).Questions;
+        var q2 = questions[1];
+        var p = new Progress();
+
+        Assert.False(p.RecordAnswer(q2, (q2.Correct + 1) % 4));
+        Assert.Equal(1, p.CountMistakes(questions));
+        Assert.Equal([2], p.MistakeQueue(questions, Fixtures.Random()));
+
+        for (var i = 0; i < Progress.MasteredBox; i++) Assert.True(p.RecordAnswer(q2, q2.Correct));
+        Assert.Equal(0, p.CountMistakes(questions));
     }
 }

@@ -1,4 +1,4 @@
-namespace Ebt.Domain.Tests;
+namespace Ebt.Learning.Tests;
 
 internal static class Fixtures
 {
@@ -8,7 +8,7 @@ internal static class Fixtures
     public static Catalog Catalog(int general = 300, int state = 10) => new(
         [
             .. Enumerable.Range(1, general).Select(n => Question(n)),
-            .. Enumerable.Range(Domain.Question.FirstStateNumber, state).Select(n => Question(n, isState: true)),
+            .. Enumerable.Range(Content.Question.FirstStateNumber, state).Select(n => Question(n, isState: true)),
         ],
         [],
         new Dictionary<int, Translation>());
