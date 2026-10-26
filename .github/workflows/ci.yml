@@ -23,6 +23,21 @@ jobs:
       - name: Content valid and wwwroot/data built from it
         run: dotnet run --project src/Ebt.Pipeline -- check
       - run: dotnet publish src/Ebt.App -c Release -o publish
+      # The first visit downloads every published file (the service worker precaches them all), so growth is a
+      # start-up cost on the phone. Measured on 2026-10-26: runtime and assemblies 5.42 MB, everything 7.04 MB
+      # (uncompressed). Raise a budget only on purpose, with the reason in the commit.
+      - name: Download size within budget
+        working-directory: publish/wwwroot
+        env:
+          FRAMEWORK_BUDGET: 5900000
+          TOTAL_BUDGET: 7700000
+        run: |
+          bytes() { find "$1" -type f -printf '%s\n' | awk '{ s += $1 } END { print s + 0 }'; }
+          framework=$(bytes _framework)
+          total=$(bytes .)
+          echo "runtime and assemblies: $framework bytes (budget $FRAMEWORK_BUDGET)"
+          echo "everything: $total bytes (budget $TOTAL_BUDGET)"
+          [ "$framework" -le "$FRAMEWORK_BUDGET" ] && [ "$total" -le "$TOTAL_BUDGET" ]
       - id: pages
         if: github.event_name == 'push'
         uses: actions/configure-pages@v6
