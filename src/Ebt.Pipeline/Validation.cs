@@ -1,5 +1,5 @@
 using System.Text.RegularExpressions;
-using Ebt.Domain;
+using Ebt.Content;
 
 namespace Ebt.Pipeline;
 
@@ -19,7 +19,7 @@ public static partial class Validation
     public static IReadOnlyList<string> Check(SourceData src, CatalogShape shape) =>
         [.. Completeness(src, shape), .. Questions(src), .. Translations(src), .. Glossary(src)];
 
-    /// <summary>Every question of the catalogue exactly once, and nothing else: the app finds question n at position n − 1.</summary>
+    /// <summary>Every question of the catalogue exactly once, and nothing else.</summary>
     internal static IEnumerable<string> Completeness(SourceData src, CatalogShape shape)
     {
         foreach (var twice in src.Answers.GroupBy(a => a.Nr).Where(g => g.Count() > 1).OrderBy(g => g.Key))

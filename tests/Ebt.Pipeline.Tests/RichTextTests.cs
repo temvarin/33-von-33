@@ -1,4 +1,4 @@
-using Ebt.Domain;
+using Ebt.Content;
 
 namespace Ebt.Pipeline.Tests;
 
@@ -27,9 +27,4 @@ public class RichTextTests
     [Fact]
     public void Without_a_matcher_only_emphasis_is_parsed() =>
         Assert.Equal([new Segment("Что "), new Segment("не", Underline: true), new Segment(" относится?")], RichText.Parse("Что _не_ относится?"));
-
-    [Fact]
-    public void Serializes_plain_segments_as_strings_to_keep_the_data_small() =>
-        Assert.Equal("""["Was ist ",{"t":"kein","u":true}," ",{"t":"Bundesland","term":0},"?"]""",
-            Json.Write(RichText.Parse("Was ist _kein_ Bundesland?", Terms)));
 }

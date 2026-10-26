@@ -1,5 +1,5 @@
 using System.Text.Json;
-using Ebt.Domain;
+using Ebt.Content;
 
 namespace Ebt.Pipeline.Tests;
 
@@ -23,7 +23,7 @@ public class DataBuilderTests
             pictures: new HashSet<int> { 200 });
 
         var output = DataBuilder.Build(src);
-        var questions = JsonSerializer.Deserialize<Question[]>(output.JsonFiles["questions.json"], Json.Options)!;
+        var questions = JsonSerializer.Deserialize(output.JsonFiles[ContentJson.QuestionsFile], ContentJson.Questions)!;
 
         Assert.Equal([false, true], questions.Select(q => q.IsState));
         Assert.Equal([null, "data/img/200.png"], questions.Select(q => q.Image));
