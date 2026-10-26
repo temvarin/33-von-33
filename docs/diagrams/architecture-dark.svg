@@ -84,4 +84,10 @@
 <path d="M894 313V364" class="flow" marker-end="url(#arrow)"/>
 <text x="880" y="336" class="label" text-anchor="end">GitHub Actions:</text>
 <text x="880" y="355" class="label" text-anchor="end">test · check · publish</text>
+
+<!-- key: solid arrows carry data, dashed ones point from a library to the project that uses it -->
+<path d="M334 404H374" class="flow" marker-end="url(#arrow)"/>
+<text x="386" y="409" class="label">data flow</text>
+<path d="M334 434H374" class="uses" marker-end="url(#arrow)"/>
+<text x="386" y="439" class="label">library used by (project reference)</text>
 </svg>

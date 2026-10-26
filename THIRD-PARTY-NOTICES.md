@@ -14,7 +14,7 @@ licensed under the SIL Open Font License 1.1. The license texts are next to the 
 
 ## Icons
 
-Icon outlines in `src/Ebt.App/Components/Icon.razor` are from Tabler Icons (https://tabler.io/icons), MIT License:
+Icon outlines in `src/Ebt.App/Shared/Icon.razor` are from Tabler Icons (https://tabler.io/icons), MIT License:
 
 ```
 MIT License
