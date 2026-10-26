@@ -39,39 +39,47 @@ Then open it once while online so everything is cached for offline use. Updates 
 
 ## Engineering highlights
 
-- **One domain, two consumers.** `Ebt.Domain` holds the content types and the learning rules. The pipeline writes the app's data with the same types the app reads it with, so the two can't drift apart unnoticed: a changed type fails to compile in both, and a test reads the JSON form the pipeline writes.
+- **One data contract, two consumers.** `Ebt.Content` holds the content types and the one serializer for them. The pipeline writes the app's data with the same types and JSON settings the app reads it with, so the two can't drift apart unnoticed: a changed type fails to compile in both, and tests read the pipeline's output and the committed data the way the app loads them. The learning rules live apart in `Ebt.Learning`, which only the app uses.
 - **Content is validated like code.** The pipeline checks the sources against content rules – the complete catalogue with every question exactly once, four answers each, translations for everything – pre-parses all text so the app does no parsing, and CI fails if the committed data differs from what the sources produce.
-- **Encapsulated domain state.** State changes only through domain methods (`Record`, `StartExam`, `Exam.Answer`); setters are internal and exist for source-generated JSON.
-- **Deterministic tests.** Clock (`TimeProvider`) and randomness are injected, so the domain is tested with xUnit and the components with bUnit against a fake clock.
-- **Trimming-safe and lean.** Source-generated JSON instead of reflection, no ICU culture data, self-hosted fonts subset to Latin and Cyrillic.
+- **Encapsulated domain state.** State changes only through domain methods (`Record`, `StartExam`, `Exam.Answer`); the domain types know nothing about JSON. Progress is stored in records of its own, one set per schema version, and mapped to and from the domain. Tests load and save progress in the exact format of the released app, so a domain change can't silently reset a learner's progress.
+- **Deterministic tests.** Clock (`TimeProvider`) and randomness are injected, so the domain and the session services are tested with xUnit and the components with bUnit against a fake clock.
+- **Trimming-safe and lean.** Source-generated JSON instead of reflection, no ICU culture data, self-hosted fonts subset to Latin and Cyrillic. CI fails if the published app outgrows its download budget.
 - **Offline by design.** The service worker precaches every file of a release, verifies each against its build-time hash (except `index.html`, which the deploy job adjusts after the build) and serves the app from a versioned cache.
 - **Strict build.** .NET analyzers at the recommended level, warnings are errors, the SDK version pinned in `global.json`.
+- **Architecture checked as code.** `Ebt.Architecture.Tests` (NetArchTest) keeps the module structure on the compiled code: features don't use each other, only `Infrastructure` touches JavaScript, pages never change the learning state themselves, and the domain stays free of UI, I/O and JSON. Each rule states why it exists.
 - **Readable for everyone.** Every text colour meets WCAG AA in light and dark mode, colour is never the only signal, tap targets are at least 44 px, and motion respects *reduce motion*. Full keyboard support for the glossary and dialogs is still to come.
 
 ## Architecture
 
-One .NET 10 solution: a Blazor WebAssembly app and a content pipeline that share a domain library.
+One .NET 10 solution: a Blazor WebAssembly app and a content pipeline that share a data contract.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/diagrams/architecture-dark.svg">
-  <img src="docs/diagrams/architecture-light.svg" alt="Architecture: hand-maintained content files go into Ebt.Pipeline, which validates them and writes pre-parsed data to wwwroot/data; Ebt.App, a Blazor WebAssembly PWA, reads that data. Both use the shared Ebt.Domain library. GitHub Actions tests, checks and publishes the app to GitHub Pages.">
+  <img src="docs/diagrams/architecture-light.svg" alt="Architecture: hand-maintained content files go into Ebt.Pipeline, which validates them and writes pre-parsed data to wwwroot/data; Ebt.App, a Blazor WebAssembly PWA, reads that data. Both use the data contract in Ebt.Content; the app also uses the learning rules in Ebt.Learning. GitHub Actions tests, checks and publishes the app to GitHub Pages.">
 </picture>
 
-- **Ebt.Domain** (`src/Ebt.Domain`): the content types and the learning rules – Leitner boxes, mock exam, stored progress with a schema version. No UI, no I/O; clock and randomness are passed in.
-- **Ebt.Pipeline** (`src/Ebt.Pipeline`): owns all content processing. It validates the sources against the content rules, finds glossary terms in the German text and writes the app's data as segments with the domain types. `check` fails CI if the committed data differs from what the sources produce.
-- **Ebt.App** (`src/Ebt.App`): Razor components on top of the domain. Services (catalog, progress, dialogs, clock, randomness) are injected.
+- **Ebt.Content** (`src/Ebt.Content`): the data contract – questions, translations, glossary terms, text segments – and the JSON form of the data files. No dependencies.
+- **Ebt.Learning** (`src/Ebt.Learning`): the learning rules – Leitner boxes, practice runs, mock exam – and the stored form of the progress, with a schema version and its own records. No UI, no I/O; clock and randomness are passed in.
+- **Ebt.Pipeline** (`src/Ebt.Pipeline`): owns all content processing. It validates the sources against the content rules, finds glossary terms in the German text and writes the app's data as segments with the contract's types and serializer. It doesn't reference the learning rules. `check` fails CI if the committed data differs from what the sources produce.
+- **Ebt.App** (`src/Ebt.App`): Razor components on top of the contract and the learning rules. Pages render and read; changes go through session services (practice, review, exam), each of which changes the progress and saves it in one call. The exam session also runs the clock and hands the exam in when the time is up. Services (catalog, sessions, dialogs, clock, randomness) are injected.
 
 ### Repository layout
 
 ```
 src/
-  Ebt.Domain/            content types, Leitner progress, mock exam, progress storage
-  Ebt.App/               Blazor WebAssembly PWA: pages, components, services
+  Ebt.Content/           data contract: content types and their JSON form
+  Ebt.Learning/          Leitner progress, practice runs, mock exam, progress storage
+  Ebt.App/               Blazor WebAssembly PWA, one folder per feature:
+    Features/            Home, Practice, Review, MockExam, Glossary, Stats: pages and session services
+    Shared/              components and state every feature uses
+    Infrastructure/      browser storage, catalog loading, the window (JavaScript only here)
     wwwroot/data/        generated by the pipeline – do not edit
   Ebt.Pipeline/          console tool: build, check, fetch-images, translation-report
 tests/
-  Ebt.Domain.Tests/      xUnit
-  Ebt.App.Tests/         bUnit component tests
+  Ebt.Content.Tests/     xUnit
+  Ebt.Learning.Tests/    xUnit
+  Ebt.App.Tests/         bUnit component tests, session services
+  Ebt.Architecture.Tests/ module and dependency rules (NetArchTest)
   Ebt.Pipeline.Tests/    xUnit
 content/                 answers, texts, translations, glossary, pictures, review logs,
                          and the browser script that captures the official answers

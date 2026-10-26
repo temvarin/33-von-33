@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 480" width="1024" height="480" role="img" aria-labelledby="title desc">
 <title id="title">Architecture of 33 von 33</title>
-<desc id="desc">Hand-maintained content files go into Ebt.Pipeline, which validates them and writes pre-parsed data to wwwroot/data. Ebt.App, a Blazor WebAssembly PWA, reads that data. Both use the shared Ebt.Domain library. GitHub Actions tests, checks and publishes the app to GitHub Pages.</desc>
+<desc id="desc">Hand-maintained content files go into Ebt.Pipeline, which validates them and writes pre-parsed data to wwwroot/data. Ebt.App, a Blazor WebAssembly PWA, reads that data. Both use the data contract in Ebt.Content; the app also uses the learning rules in Ebt.Learning. GitHub Actions tests, checks and publishes the app to GitHub Pages.</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#EDE8DA"/></marker>
 <style>
@@ -33,16 +33,24 @@
 <text x="44" y="366" class="file">glossary.json</text><text x="44" y="385" class="sub">terms and word forms</text>
 <text x="44" y="414" class="file">pictures/</text><text x="44" y="433" class="sub">images from the catalogue</text>
 
-<!-- shared domain -->
+<!-- shared libraries: the data contract (pipeline and app), the learning rules (app only) -->
 
-  <rect x="319" y="33" width="680" height="76" rx="12" class="shadow"/>
-  <rect x="314" y="28" width="680" height="76" rx="12" class="gold"/>
-  <text x="334" y="62" class="title dark">Ebt.Domain</text>
-  <text x="334" y="86" class="on-gold">content types · Leitner progress · exam rules</text>
+  <rect x="319" y="33" width="440" height="76" rx="12" class="shadow"/>
+  <rect x="314" y="28" width="440" height="76" rx="12" class="gold"/>
+  <text x="334" y="62" class="title dark">Ebt.Content</text>
+  <text x="334" y="86" class="on-gold">data contract · one JSON serializer</text>
+
+  <rect x="799" y="33" width="200" height="76" rx="12" class="shadow"/>
+  <rect x="794" y="28" width="200" height="76" rx="12" class="gold"/>
+  <text x="814" y="62" class="title dark">Ebt.Learning</text>
+  <text x="814" y="86" class="on-gold">Leitner · exam rules</text>
+<path d="M754 66H786" class="uses" marker-end="url(#arrow)"/>
 <path d="M414 109V196" class="uses" marker-end="url(#arrow)"/>
-<path d="M894 109V196" class="uses" marker-end="url(#arrow)"/>
-<text x="426" y="158" class="label">shared types</text>
-<text x="906" y="158" class="label">shared types</text>
+<path d="M704 109V150H854V196" class="uses" marker-end="url(#arrow)"/>
+<path d="M934 109V196" class="uses" marker-end="url(#arrow)"/>
+<text x="426" y="158" class="label">contract</text>
+<text x="716" y="140" class="label">contract</text>
+<text x="946" y="158" class="label">rules</text>
 
 <!-- data flow -->
 
