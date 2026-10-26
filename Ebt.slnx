@@ -1,11 +1,13 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Ebt.App/Ebt.App.csproj" />
+    <Project Path="src/Ebt.Content/Ebt.Content.csproj" />
     <Project Path="src/Ebt.Domain/Ebt.Domain.csproj" />
     <Project Path="src/Ebt.Pipeline/Ebt.Pipeline.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Ebt.App.Tests/Ebt.App.Tests.csproj" />
+    <Project Path="tests/Ebt.Content.Tests/Ebt.Content.Tests.csproj" />
     <Project Path="tests/Ebt.Domain.Tests/Ebt.Domain.Tests.csproj" />
     <Project Path="tests/Ebt.Pipeline.Tests/Ebt.Pipeline.Tests.csproj" />
   </Folder>

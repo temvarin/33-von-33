@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Ebt.Domain;
+namespace Ebt.Content;
 
 // The app's content as the pipeline writes it to wwwroot/data and the app reads it.
 // The short JSON names keep the files small; the C# names say what they mean.
