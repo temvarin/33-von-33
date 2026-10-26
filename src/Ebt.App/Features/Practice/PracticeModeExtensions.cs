@@ -1,6 +1,6 @@
-using Ebt.Domain;
+using Ebt.Learning;
 
-namespace Ebt.App.Components;
+namespace Ebt.App.Features.Practice;
 
 internal static class PracticeModeExtensions
 {

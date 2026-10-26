@@ -1,6 +1,6 @@
-using Ebt.App.Pages;
-using Ebt.App.Services;
-using Ebt.Domain;
+using Ebt.App.Features.MockExam;
+using Ebt.App.Shared;
+using Ebt.Learning;
 
 namespace Ebt.App.Tests;
 
@@ -8,7 +8,7 @@ public class MockExamTests : AppTestContext
 {
     private IRenderedComponent<WithTopBar> StartExam()
     {
-        var page = Render<WithTopBar>(p => p.AddChildContent<MockExam>());
+        var page = Render<WithTopBar>(p => p.AddChildContent<MockExamPage>());
         page.FindAll("button").Single(b => b.TextContent == "Prüfung starten").Click();
         return page;
     }
@@ -86,7 +86,7 @@ public class MockExamTests : AppTestContext
         Progress.StartExam(Catalog.Questions, Clock.GetUtcNow(), new Random(1));
         Clock.Advance(Exam.Duration);
 
-        var page = Render<MockExam>();
+        var page = Render<MockExamPage>();
 
         Assert.Null(Progress.Exam);
         Assert.Empty(Progress.Exams);

@@ -1,0 +1,79 @@
+@page "/exam"
+@implements IDisposable
+@inject Catalog Catalog
+@inject ExamSession Session
+@inject Dialogs Dialogs
+@inject NavigationManager Nav
+
+@* Renders the exam; ExamSession runs it (clock, moving on after an answer, handing in). *@
+@if (Session.Exam is not { } exam)
+{
+    <TopBar Title="Prüfung simulieren" Back="" />
+    <div class="card">
+        <b>So läuft die Prüfung ab</b>
+        <ul class="rules">
+            <li>@Exam.QuestionCount Fragen: @Exam.GeneralQuestions allgemeine + @Exam.StateQuestions zu NRW</li>
+            <li>@Exam.Duration.TotalMinutes.ToString("0", CultureInfo.InvariantCulture) Minuten Zeit</li>
+            <li>Bestanden ab @Exam.PassMark richtigen Antworten</li>
+            <li>Die Lösungen siehst du erst am Ende</li>
+        </ul>
+    </div>
+    <button class="btn primary" @onclick="Session.Start">Prüfung starten</button>
+}
+else
+{
+    var remaining = Session.Remaining;
+    <TopBar Title="Prüfung" Back="">
+        <span class="timer @(remaining < TimeSpan.FromMinutes(5) ? "low" : "")">@((int)remaining.TotalMinutes):@remaining.Seconds.ToString("00")</span>
+    </TopBar>
+    <QuestionCard @key="exam.Position" Question="Catalog[exam.Questions[exam.Position]]" Label="@($"Frage {exam.Position + 1} von {exam.Questions.Count}")"
+                  Chosen="exam.Answers[exam.Position]" Help="false" OnAnswer="Session.Answer" />
+    <div class="nav">
+        <button class="btn" disabled="@(exam.Position == 0)" @onclick="() => Session.GoTo(exam.Position - 1)"><Icon Name="arrow-left" />Zurück</button>
+        <button class="btn" disabled="@(exam.Position == exam.Questions.Count - 1)" @onclick="() => Session.GoTo(exam.Position + 1)">Weiter<Icon Name="arrow-right" /></button>
+    </div>
+    <div class="card overview">
+        <div class="qmeta"><span>Übersicht</span><span>@exam.AnsweredCount / @exam.Questions.Count beantwortet</span></div>
+        <div class="grid">
+            @for (var i = 0; i < exam.Questions.Count; i++)
+            {
+                var position = i;
+                <button class="@(exam.Answers[i] is not null ? "done" : "") @(i == exam.Position ? "current" : "")" @onclick="() => Session.GoTo(position)">@(i + 1)</button>
+            }
+        </div>
+    </div>
+    <button class="btn primary" @onclick="ConfirmHandIn">Prüfung abgeben</button>
+}
+
+@code {
+    protected override void OnInitialized()
+    {
+        Session.Changed += OnChanged;
+        Session.Ended += OnEnded;
+        Session.Open(InvokeAsync);
+    }
+
+    private void OnChanged() => InvokeAsync(StateHasChanged);
+
+    private void OnEnded(ExamEnd how)
+    {
+        Nav.NavigateTo("exam/result/0");
+        if (how == ExamEnd.TimeUp) Dialogs.Alert("Die Zeit ist abgelaufen. Die Prüfung wurde automatisch abgegeben.");
+    }
+
+    private async Task ConfirmHandIn()
+    {
+        var exam = Session.Exam!;
+        var open = exam.Questions.Count - exam.AnsweredCount;
+        if (await Dialogs.Confirm(open > 0 ? $"Noch {open} Fragen unbeantwortet. Trotzdem abgeben?" : "Prüfung jetzt abgeben?",
+                ok: "Abgeben", cancel: "Weiter üben"))
+            Session.HandIn();
+    }
+
+    public void Dispose()
+    {
+        Session.Changed -= OnChanged;
+        Session.Ended -= OnEnded;
+        Session.Close();
+    }
+}

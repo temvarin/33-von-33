@@ -1,7 +1,7 @@
 @page "/review"
 @inject Catalog Catalog
 @inject AppState State
-@inject Random Random
+@inject ReviewSession Session
 @inject NavigationManager Nav
 
 @* Mistakes review: the weakest question first, until every mistake is learned. *@
@@ -35,7 +35,7 @@ else
 
     private void Next()
     {
-        var queue = State.Progress.MistakeQueue(Catalog.Questions, Random);
+        var queue = Session.Queue();
         question = queue.Count > 0 ? Catalog[queue[0]] : null;
         if (question is not null) label = $"Noch {queue.Count} · {State.Progress.BoxOf(question.Number)}/{Progress.MasteredBox} richtig";
         chosen = null;
@@ -44,8 +44,7 @@ else
 
     private void Answer(int answer)
     {
-        State.Progress.Record(question!.Number, answer == question.Correct);
-        State.Save();
+        Session.Answer(question!, answer);
         chosen = answer;
     }
 }

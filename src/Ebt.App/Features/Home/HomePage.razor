@@ -2,7 +2,6 @@
 @inject Catalog Catalog
 @inject AppState State
 @inject TimeProvider Clock
-@inject Random Random
 @inject NavigationManager Nav
 
 <TopBar Title="Einbürgerungstest" Kicker="@($"Nordrhein-Westfalen · {total} Fragen")" />
@@ -22,7 +21,7 @@
         <Icon Name="repeat" />Fehler<small>@(mistakes > 0 ? $"{mistakes} offen" : "Keine offen")</small>
     </button>
     <button class="tile" @onclick='() => Nav.NavigateTo("exam")'>
-        <Icon Name="clipboard-check" />Prüfung<small>@(examLeft is { } left ? $"Läuft · noch {(int)Math.Ceiling(left.TotalMinutes)} Min." : "33 Fragen · 60 Min.")</small>
+        <Icon Name="clipboard-check" />Prüfung<small>@(examLeft is { } left ? $"Läuft · noch {(int)Math.Ceiling(left.TotalMinutes)} Min." : $"{Exam.QuestionCount} Fragen · {Exam.Duration.TotalMinutes:0} Min.")</small>
     </button>
     <button class="tile" @onclick='() => Nav.NavigateTo("glossary")'>
         <Icon Name="language" /><span lang="ru">Словарь</span><small>@Catalog.Terms.Count Begriffe</small>
@@ -43,7 +42,7 @@
         var progress = State.Progress;
         total = Catalog.Questions.Count;
         mastered = progress.CountMastered(Catalog.Questions);
-        mistakes = progress.MistakeQueue(Catalog.Questions, Random).Count;
+        mistakes = progress.CountMistakes(Catalog.Questions);
         run = progress.Practice;
         resume = run.Order.Count > 0 && !run.IsFinished;
         var now = Clock.GetUtcNow();

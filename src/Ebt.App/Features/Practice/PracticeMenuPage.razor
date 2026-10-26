@@ -1,7 +1,7 @@
 @page "/practice"
 @inject Catalog Catalog
 @inject AppState State
-@inject Random Random
+@inject PracticeSession Session
 @inject NavigationManager Nav
 
 <TopBar Title="Üben" Back="" />
@@ -30,7 +30,7 @@
     <b>Zu Frage springen</b>
     <div class="spacer"></div>
     <form class="goto" @onsubmit="GoTo">
-        <input type="number" inputmode="numeric" min="1" max="@Catalog.Questions.Count" placeholder="1–@Catalog.Questions.Count (NRW: 301–310)"
+        <input type="number" inputmode="numeric" min="@first" max="@last" placeholder="@first–@last (NRW: @stateFirst–@stateLast)"
                aria-label="Fragenummer" required @bind="number" @bind:event="oninput">
         <button class="btn primary">Los</button>
     </form>
@@ -40,23 +40,25 @@
     private PracticeRun run = null!;
     private int unseen;
     private int? number;
+    private int first, last, stateFirst, stateLast; // question numbers, for the hint
 
     protected override void OnInitialized()
     {
-        run = State.Progress.Practice;
+        run = Session.Run;
         unseen = Catalog.Questions.Count(q => State.Progress.IsNew(q.Number));
+        (first, last) = (Catalog.Questions.Min(q => q.Number), Catalog.Questions.Max(q => q.Number));
+        var state = Catalog.Questions.Where(q => q.IsState).Select(q => q.Number).DefaultIfEmpty().ToList();
+        (stateFirst, stateLast) = (state.Min(), state.Max());
     }
 
-    private void Start(PracticeMode mode, int position = 0)
+    private void Start(PracticeMode mode)
     {
-        State.Progress.StartPractice(mode, Catalog.Questions, Random, position);
-        State.Save();
+        Session.Start(mode);
         Nav.NavigateTo("practice/run");
     }
 
-    // Question n is at position n - 1: the pipeline only builds a catalogue without gaps (Validation.Completeness).
     private void GoTo()
     {
-        if (number is { } n && Catalog.Contains(n)) Start(PracticeMode.Order, n - 1);
+        if (number is { } n && Session.StartAt(n)) Nav.NavigateTo("practice/run");
     }
 }

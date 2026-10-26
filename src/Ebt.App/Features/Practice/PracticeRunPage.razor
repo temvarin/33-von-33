@@ -1,6 +1,7 @@
 @page "/practice/run"
 @inject Catalog Catalog
 @inject AppState State
+@inject PracticeSession Session
 @inject NavigationManager Nav
 
 @if (run.IsFinished)
@@ -21,8 +22,8 @@ else
     <QuestionCard @key="run.Position" Question="question" Label="@($"Frage {run.Position + 1} von {run.Order.Count}")"
                   Chosen="chosen" Reveal="answered" Locked="answered" OnAnswer="i => Answer(question, i)" />
     <div class="nav">
-        <button class="btn" disabled="@(run.Position == 0)" @onclick="() => Move(run.Previous)"><Icon Name="arrow-left" />Zurück</button>
-        <button class="btn @(answered ? "next" : "")" @onclick="() => Move(run.Next)">@(answered ? "Weiter" : "Überspringen")<Icon Name="arrow-right" /></button>
+        <button class="btn" disabled="@(run.Position == 0)" @onclick="() => Move(Session.Previous)"><Icon Name="arrow-left" />Zurück</button>
+        <button class="btn @(answered ? "next" : "")" @onclick="() => Move(Session.Next)">@(answered ? "Weiter" : "Überspringen")<Icon Name="arrow-right" /></button>
     </div>
 }
 
@@ -30,19 +31,17 @@ else
     private PracticeRun run = null!;
     private int? chosen;
 
-    protected override void OnInitialized() => run = State.Progress.Practice;
+    protected override void OnInitialized() => run = Session.Run;
 
     private void Answer(Question question, int answer)
     {
-        State.Progress.Record(question.Number, answer == question.Correct);
-        State.Save();
+        Session.Answer(question, answer);
         chosen = answer;
     }
 
     private void Move(Action step)
     {
         step();
-        State.Save();
         chosen = null;
     }
 }

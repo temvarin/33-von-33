@@ -1,8 +1,7 @@
 @page "/exam/result/{Index:int}"
 @inject Catalog Catalog
 @inject AppState State
-@inject TimeProvider Clock
-@inject Random Random
+@inject ExamSession Session
 @inject NavigationManager Nav
 
 <TopBar Title="Ergebnis" Back="" />
@@ -46,8 +45,7 @@ else
 
     private void NewExam()
     {
-        State.Progress.StartExam(Catalog.Questions, Clock.GetUtcNow(), Random);
-        State.Save();
+        Session.Start();
         Nav.NavigateTo("exam");
     }
 }
